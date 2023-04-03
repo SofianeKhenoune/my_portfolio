@@ -1,0 +1,32 @@
+/*NAV MENU*/
+.navbar {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+  color: var(--main-color-light);
+  li {
+    flex-grow: 1;
+    text-transform: capitalize;
+    text-align: center;
+    &:hover {
+      background-color: var(--main-color-light);
+      transform: scale(1.2);
+      font-weight: 700;
+    }
+
+    .nav_item {
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+      padding: var(--main-padding);
+      &_active {
+        border-bottom: 3px solid var(--main-color-light);
+      }
+      &:hover {
+        color: var(--main-color-dark);
+      }
+    }
+  }
+}

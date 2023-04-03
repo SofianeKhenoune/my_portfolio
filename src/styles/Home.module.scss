@@ -1,0 +1,51 @@
+@import '_vars';
+
+.home_page {
+  background: url('../../public/images/computer.jpeg') center;
+  height: 70vh;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .container {
+    color: var(--main-color-dark);
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    animation: slidein 4s 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: var(--main-padding);
+    margin: var(--main-padding);
+    border-radius: inherit;
+    background-color: var(--main-color-light);
+    .title {
+      a {
+        text-decoration: none;
+        color: $base-color;
+        &:hover {
+        }
+      }
+    }
+    .about {
+      background-color: var(--main-bg-color);
+      padding: var(--main-padding-btn);
+      color: #fff;
+      text-decoration: none;
+      border-radius: inherit;
+    }
+  }
+}
+
+@keyframes slidein {
+  0% {
+    transform: scale(0.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

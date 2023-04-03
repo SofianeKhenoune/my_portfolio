@@ -1,0 +1,9 @@
+.footer_content {
+  min-width: 100px;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  .footer_logos {
+    display: flex;
+  }
+}

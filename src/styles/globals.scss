@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(https://fonts.bunny.net/css?family=roboto:400,500,700);
+@import '_root';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: var(--main-bg-color);
+  font-family: 'Roboto', Verdana, Tahoma, Arial, sans-serif;
+  font-size: var(--main-font-size);
+  color: var(--main-color-light);
+}
+
+/*GENERAL*/
+.wrapper {
+  max-width: 1024px;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template:
+    'header'
+    'main'
+    'footer';
+  /*HEADER*/
+  header {
+    grid-area: header;
+    position: relative;
+    position: sticky;
+    top: 0;
+    background-color: var(--main-bg-color);
+    border-bottom: 2px solid var(--main-color-dark);
+  }
+
+  h1 {
+    font-size: calc(var(--main-font-size) * 2);
+    padding: var(--main-padding);
+    a {
+      color: var(--main-color-light);
+    }
+  }
+  /* Bloc général */
+  .main-block {
+    /* width: 1024p; */
+    grid-area: main;
+    margin: 0 auto;
+    section {
+      padding: 100px;
+      h2 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 80px;
+      }
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    /* SECTION "EDUCATION" */
+  }
+  /*FOOTER*/
+  footer {
+    grid-area: footer;
+    border-top: 2px solid var(--main-color-dark);
+    text-align: center;
+    margin-top: var(--main-padding);
+    padding: var(--main-padding);
+  }
+  .not-found {
+    text-align: center;
+  }
+  .not-found a {
+    color: #4979ff;
+    text-decoration: underline;
+  }
+}

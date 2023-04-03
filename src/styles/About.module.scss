@@ -1,0 +1,37 @@
+#about_me {
+  display: flex;
+  flex-direction: column;
+
+  #profil_img {
+    display: flex;
+    justify-content: space-around;
+    padding: var(--main-padding);
+    img {
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--main-color-dark);
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+      #profil_name {
+        font-size: 38px;
+        font-weight: bold;
+        border-bottom: 50px;
+      }
+
+      #profil_city {
+        font-size: 30px;
+        font-style: italic;
+      }
+    }
+  }
+
+  #profil_txt {
+    font-size: var(--main-font-size);
+    margin-bottom: 40px;
+    text-transform: capitalize;
+  }
+}
