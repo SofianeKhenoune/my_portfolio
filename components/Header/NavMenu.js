@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import styles from '../../src/styles/Header.module.scss';
+import { useRouter } from 'next/router';
 const NavMenu = () => {
+  const pathname = useRouter().pathname;
+
   return (
     <nav>
       <ul className={styles.navbar}>
@@ -8,7 +11,7 @@ const NavMenu = () => {
           <Link
             href='/'
             className={
-              isActive
+              pathname === '/'
                 ? `${styles.nav_item} + ${styles.nav_item_active}`
                 : styles.nav_item
             }
@@ -20,7 +23,7 @@ const NavMenu = () => {
           <Link
             href='/about'
             className={
-              isActive
+              pathname === '/about'
                 ? `${styles.nav_item} + ${styles.nav_item_active}`
                 : styles.nav_item
             }
@@ -32,7 +35,7 @@ const NavMenu = () => {
           <Link
             href='/education'
             className={
-              isActive
+              pathname === '/education'
                 ? `${styles.nav_item} + ${styles.nav_item_active}`
                 : styles.nav_item
             }
@@ -44,7 +47,7 @@ const NavMenu = () => {
           <Link
             href='/projects'
             className={
-              isActive
+              pathname === '/projects'
                 ? `${styles.nav_item} + ${styles.nav_item_active}`
                 : styles.nav_item
             }
@@ -56,7 +59,7 @@ const NavMenu = () => {
           <Link
             href='/contact'
             className={
-              isActive
+              pathname === '/contact'
                 ? `${styles.nav_item} + ${styles.nav_item_active}`
                 : styles.nav_item
             }

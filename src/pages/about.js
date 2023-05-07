@@ -24,12 +24,7 @@ const About = () => {
             </div>
           </div>
           <div id={styles.profil_txt}>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
-              illum praesentium? Accusamus corrupti ad est, tempore sapiente
-              dolores in magnam nulla sequi, obcaecati dignissimos voluptas?
-              Accusamus minus ipsam possimus doloribus.
-            </p>
+            <p></p>
           </div>
         </section>
       </main>

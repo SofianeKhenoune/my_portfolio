@@ -6,10 +6,12 @@
   list-style-type: none;
   text-align: center;
   color: var(--main-color-light);
+  border-bottom: 2px solid var(--main-color-dark);
   li {
     flex-grow: 1;
     text-transform: capitalize;
     text-align: center;
+    border-radius: var(--radius);
     &:hover {
       background-color: var(--main-color-light);
       transform: scale(1.2);
@@ -21,6 +23,7 @@
       display: inline-block;
       width: 100%;
       padding: var(--main-padding);
+      border-radius: inherit;
       &_active {
         border-bottom: 3px solid var(--main-color-light);
       }

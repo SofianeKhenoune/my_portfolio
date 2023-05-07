@@ -3,26 +3,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
   h2 {
-    font-size: 30px;
     text-align: center;
   }
   h3 {
-    font-size: 26px;
-    font-weight: bold;
     margin-bottom: 40px;
   }
   p {
     margin-bottom: 100px;
   }
-  .project:not(:last-child) {
-    margin-bottom: 100px;
-  }
+
   .project {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 3em;
     flex: 1;
     height: 300px;
     h4 {
@@ -35,8 +30,6 @@
       list-style-type: disc;
     }
     img {
-      width: 500px;
-      height: 280px;
       margin-right: 60px;
       border-radius: 10px;
     }
@@ -48,7 +41,7 @@
     }
   }
 
-  .txt-pojects {
+  .txt_pojects {
     text-align: center;
   }
 }
