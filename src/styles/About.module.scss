@@ -31,7 +31,10 @@
 
   #profil_txt {
     font-size: var(--main-font-size);
-    margin-bottom: 40px;
-    text-transform: capitalize;
+    text-align: justify;
+    padding: 1em;
+    p:not(:last-child) {
+      margin-bottom: 1em;
+    }
   }
 }

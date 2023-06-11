@@ -10,9 +10,10 @@
   padding: 0;
   margin: 0;
 }
-
 html,
 body {
+  padding: 0 1em;
+  height: 100%;
   background-color: var(--main-bg-color);
   font-family: 'Roboto', Verdana, Tahoma, Arial, sans-serif;
   font-size: var(--main-font-size);
@@ -27,21 +28,17 @@ h4 {
 
 /*GENERAL*/
 .wrapper {
-  max-width: 1024px;
-  height: 100vh;
-  margin: auto;
+  min-height: 100%;
   display: grid;
-  grid-template:
-    'header'
-    'main'
-    'footer';
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
   /*HEADER*/
   header {
-    grid-area: header;
     position: relative;
     position: sticky;
     top: 0;
     background-color: var(--main-bg-color);
+    padding: var(--main-padding) 0;
   }
 
   h1 {
@@ -53,14 +50,11 @@ h4 {
   }
   /* Bloc général */
   .main-block {
-    /* width: 1024p; */
-    grid-area: main;
     margin: 0 auto;
     section {
       h2 {
         font-size: 30px;
         font-weight: bold;
-        margin-bottom: 80px;
       }
     }
 
@@ -72,11 +66,9 @@ h4 {
   }
   /*FOOTER*/
   footer {
-    grid-area: footer;
     border-top: 2px solid var(--main-color-dark);
     text-align: center;
-    margin-top: var(--main-padding);
-    padding-top: var(--main-padding);
+    padding: var(--main-padding) 0;
   }
   .not-found {
     text-align: center;

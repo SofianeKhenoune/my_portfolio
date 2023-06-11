@@ -14,7 +14,6 @@
     border-radius: var(--radius);
     &:hover {
       background-color: var(--main-color-light);
-      transform: scale(1.2);
       font-weight: 700;
     }
 
@@ -25,7 +24,7 @@
       padding: var(--main-padding);
       border-radius: inherit;
       &_active {
-        border-bottom: 3px solid var(--main-color-light);
+        background-color: var(--main-color-dark);
       }
       &:hover {
         color: var(--main-color-dark);

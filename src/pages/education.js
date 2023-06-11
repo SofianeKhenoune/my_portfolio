@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Head from 'next/head';
+import styles from '../styles/Education.module.scss';
 const Education = () => {
   return (
     <>
@@ -7,10 +8,10 @@ const Education = () => {
         <title>Mon Portfolio - Education</title>
       </Head>
       <main className='main-block'>
-        <section id='education'>
+        <section id={styles.education}>
           <h2>Formation</h2>
-          <p>Les technologies sur lesquelles je me forme actuellement:</p>
-          <div className='logos'>
+          <p>Les technologies que je maîtrise:</p>
+          <div className={styles.logos}>
             <Image src='/images/html.png' alt='HTML' width={150} height={150} />
             <Image src='/images/css.png' alt='CSS' width={150} height={150} />
             <Image
@@ -19,25 +20,24 @@ const Education = () => {
               width={150}
               height={150}
             />
+            <Image
+              src='/images/react.png'
+              alt='React'
+              width={190}
+              height={150}
+            />
           </div>
           <p>
-            Pochainement, je suivrai la formation
-            <strong>Développement Web &amp; Mobile</strong> au
-            <strong>Reacteur</strong> afin de perfectionner mes connaissances et
-            d'apprendre de nouvelles technologies :
+            Les technologies et compétences qui sont en cours d'acquisition :{' '}
           </p>
-          <div className='logos'>
+
+          <div className={styles.logos}>
             <Image
               src='/images/mongodb.png'
               alt='MangoDb'
               width={200}
               height={150}
-            />
-            <Image
-              src='/images/react.png'
-              alt='React'
-              width={150}
-              height={150}
+              style={{ backgroundColor: '#fff', borderRadius: '1em' }}
             />
           </div>
         </section>

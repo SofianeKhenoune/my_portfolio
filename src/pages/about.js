@@ -24,7 +24,37 @@ const About = () => {
             </div>
           </div>
           <div id={styles.profil_txt}>
-            <p></p>
+            <p>
+              Je suis un éveloppeur passionné et motivé qui a suivi une
+              formation intensive de six mois en tant que développeur web et web
+              mobile. Cette formation m'a permis d'acquérir les compétences
+              nécessaires pour concevoir et développer des sites web, des
+              applications web et des applications mobiles.
+            </p>
+            <p>
+              De plus, j'ai récemment terminé un stage de deux mois dans une
+              entreprise de développement de logiciels (Consulting en sécurité).
+            </p>
+            <p>
+              Au cours de ce stage, j'ai travaillé sur un projet d'application
+              de traitement et dépouillement d'appels d'offre, acquérant ainsi
+              une expérience précieuse dans la gestion de projets et la
+              collaboration avec d'autres développeurs.
+            </p>
+            <p>
+              J'ai également réalisé deux projets personnels au cours de ma
+              formation, démontrant ainsi ma capacité à travailler de manière
+              autonome et à résoudre des problèmes de manière créative. Ces
+              projets m'ont également permis d'appliquer les connaissances
+              acquises au cours de ma formation de manière pratique et de me
+              perfectionner dans la programmation.
+            </p>
+            <p>
+              Je crois désormais être prêt à relever de nouveaux défis et à
+              contribuer à des projets de développement web et mobile en
+              espérant apporter mon expertise technique et ma passion pour la
+              programmation.
+            </p>
           </div>
         </section>
       </main>

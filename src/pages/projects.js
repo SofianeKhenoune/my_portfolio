@@ -64,7 +64,7 @@ const Projects = () => {
           </p>
           <div
             className={styles.project}
-            style={{ background: url('/images/tripadvisor.png') }}
+            style={{ background: "url('/images/tripadvisor.png')" }}
           >
             src='/images/tripadvisor.png'
             <div>

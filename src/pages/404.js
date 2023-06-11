@@ -5,13 +5,13 @@ import { useRouter } from 'next/router';
 const NotFound = () => {
   const router = useRouter();
 
-  useEffect(() => {
+  /*useEffect(() => {
     setTimeout(() => {
       // router.go(-1)
       // router.go(1)
       router.push('/');
     }, 5000);
-  }, []);
+  }, []);*/
 
   return (
     <main className='main-block'>
