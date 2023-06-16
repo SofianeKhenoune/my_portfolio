@@ -2,17 +2,16 @@
 
 .home_page {
   background: url('../../public/images/computer.jpeg') center;
-  height: 70vh;
   border-radius: var(--radius);
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   .container {
     color: var(--main-color-dark);
-    width: 80%;
-    height: 80%;
     text-align: center;
+    height: auto;
     animation: slidein 4s 1;
     display: flex;
     justify-content: space-around;
