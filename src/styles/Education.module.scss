@@ -15,5 +15,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    .logo {
+      margin: 0.5em;
+    }
   }
 }
