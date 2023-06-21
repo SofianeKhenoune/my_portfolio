@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { SiGithub, SiMinutemailer, SiLinkedin } from 'react-icons/si';
+import { SiGithub, SiLinkedin, SiMinutemailer } from 'react-icons/si';
 import styles from '../styles/Contact.module.scss';
 
 const Contact = () => {
@@ -8,7 +8,7 @@ const Contact = () => {
       <Head>
         <title>Mon Portfolio - Contact</title>
       </Head>
-      <main className='main-block'>
+      <main className={styles.main_block}>
         <section id={styles.contact}>
           <h2>Contactez-moi</h2>
           <div>

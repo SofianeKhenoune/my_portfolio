@@ -1,27 +1,37 @@
 /*SECTION CONTACT*/
-#contact {
+.main_block {
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  border-bottom-right-radius: inherit;
-  border-bottom-left-radius: inherit;
-  img {
-    height: 30px;
-    margin-right: 20px;
-  }
-  div {
+  align-items: center;
+  justify-content: center;
+  #contact {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  a {
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 15px;
-    &:hover {
-      color: #fff;
-      background-color: #11473b;
+    flex-direction: column;
+    text-align: center;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+    h2 {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 60px;
+    }
+    img {
+      height: 30px;
+      margin-right: 20px;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    a {
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 15px;
+      &:hover {
+        color: #fff;
+        background-color: #11473b;
+      }
     }
   }
 }
