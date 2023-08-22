@@ -9,6 +9,7 @@ import {
   SiMysql,
   SiNextdotjs,
   SiSass,
+  SiTailwindcss,
 } from 'react-icons/si';
 import styles from '../styles/Education.module.scss';
 const Education = () => {
@@ -93,9 +94,17 @@ const Education = () => {
               <SiMicrosoftoffice color='#f40401' size={150} />
             </div>
           </div>
-          <p>
-            Les technologies et compétences qui sont en cours d'acquisition :
-          </p>
+          <h3> Les langages et technologies en cours d'acquisition :</h3>
+          <div className={styles.logos}>
+            <div className={styles.logo}>
+              <h4>Vue.js</h4>
+              <Image src='/images/vuejs.svg' width={150} height={150} />
+            </div>
+            <div className={styles.logo}>
+              <h4>Tailwind CSS</h4>
+              <SiTailwindcss color='#08b7d4' size={150} />
+            </div>
+          </div>
         </section>
       </main>
     </>

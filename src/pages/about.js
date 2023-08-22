@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import Head from 'next/head';
+import Image from 'next/image';
 import styles from '../styles/About.module.scss';
 
 const About = () => {
@@ -25,7 +25,7 @@ const About = () => {
           </div>
           <div id={styles.profil_txt}>
             <p>
-              Je suis un éveloppeur passionné et motivé qui a suivi une
+              Je suis un développeur passionné et motivé qui a suivi une
               formation intensive de six mois en tant que développeur web et web
               mobile. Cette formation m'a permis d'acquérir les compétences
               nécessaires pour concevoir et développer des sites web, des
