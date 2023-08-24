@@ -11,7 +11,8 @@
   .container {
     color: var(--main-color-dark);
     text-align: center;
-    height: auto;
+    height: 90%;
+    width: 90%;
     animation: slidein 4s 1;
     display: flex;
     justify-content: space-around;

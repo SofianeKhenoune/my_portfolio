@@ -1,9 +1,8 @@
 import Image from 'next/image';
-import styles from '../../src/styles/Project.module.scss';
 
 const Project = ({ link, bgImg, altText, arrayOfIcons }) => {
   return (
-    <div className={styles.project}>
+    <div className='mb-20 relative'>
       <a href={link} target='_blank'>
         <Image
           src={`/images/${bgImg}`}
@@ -12,14 +11,17 @@ const Project = ({ link, bgImg, altText, arrayOfIcons }) => {
           height={1000}
         />
       </a>
-      {arrayOfIcons.map((icon) => (
-        <Image
-          src={`/images/${icon.img}`}
-          alt={icon.altText}
-          width={200}
-          height={200}
-        />
-      ))}
+      <div className=''>
+        {arrayOfIcons.map((icon) => (
+          <Image
+            src={`/images/${icon.img}`}
+            alt={icon.altText}
+            width={200}
+            height={200}
+            key={icon.img}
+          />
+        ))}
+      </div>
     </div>
   );
 };

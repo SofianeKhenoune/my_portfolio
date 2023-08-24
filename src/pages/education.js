@@ -71,7 +71,12 @@ const Education = () => {
           <div className={styles.logos}>
             <div className={styles.logo}>
               <h4>Figma</h4>
-              <Image src='/images/figma.webp' width={150} height={150} />
+              <Image
+                src='/images/figma.webp'
+                width={150}
+                height={150}
+                alt='figma logo'
+              />
             </div>
             <div className={styles.logo}>
               <h4>Git</h4>

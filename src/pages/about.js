@@ -13,7 +13,7 @@ const About = () => {
           <div id={styles.profil_img}>
             <Image
               id={styles.img_profil}
-              src='/images/myphoto.png'
+              src='/images/profil_big.webp'
               alt='Ma photo'
               width={200}
               height={200}

@@ -1,14 +1,19 @@
-import { SiJavascript, SiReact, SiNextdotjs } from 'react-icons/si';
-import styles from '../../src/styles/Footer.module.scss';
+import {
+  SiJavascript,
+  SiNextdotjs,
+  SiReact,
+  SiTailwindcss,
+} from 'react-icons/si';
 const Footer = () => {
   return (
-    <footer>
-      <div className={styles.footer_content}>
+    <footer className='text-center'>
+      <div className='flex justify-center flex-wrap mb-3 items-center'>
         <p>Portfolio codé en avec :</p>
-        <div className={styles.footer_logos}>
-          <SiJavascript size={40} />
-          <SiNextdotjs size={40} />
-          <SiReact size={40} />
+        <div className='ml-3 flex'>
+          <SiJavascript size={30} className='mr-2' />
+          <SiNextdotjs size={30} className='mr-2' />
+          <SiReact size={30} className='mr-2' />
+          <SiTailwindcss size={30} />
         </div>
       </div>
       <p>Copyright &copy; 2023</p>

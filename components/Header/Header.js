@@ -1,10 +1,10 @@
-import NavMenu from './NavMenu';
+import NavBar from './NavBar';
 
 const Header = () => {
   return (
     <header>
       {/* menu navigation */}
-      <NavMenu />
+      <NavBar />
     </header>
   );
 };

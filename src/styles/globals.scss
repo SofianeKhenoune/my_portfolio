@@ -28,8 +28,6 @@ h4 {
 
 /*GENERAL*/
 .wrapper {
-  min-height: 100vh;
-  display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
   /*HEADER*/
@@ -51,6 +49,7 @@ h4 {
   /* Bloc général */
   .main-block {
     margin: 0 auto;
+    width: 90%;
     section {
       h2 {
         font-size: 30px;
