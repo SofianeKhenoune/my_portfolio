@@ -13,9 +13,7 @@ const Contact = () => {
           <h2>Contactez-moi</h2>
           <div>
             <SiMinutemailer />
-            <a href='mailto:sofianekhenoune.dev@gmail.com'>
-              sofianekhenoune.dev@gmail.com
-            </a>
+            <a href='mailto:sofianekhenoune.dev@gmail.com'>Email</a>
           </div>
           <div>
             <SiLinkedin />
@@ -23,13 +21,13 @@ const Contact = () => {
               href='http://www.linkedin.com/in/sofianekhenoune'
               target='_blank'
             >
-              https://www.linkedin.com/sofianekhenoune
+              Linkedin
             </a>
           </div>
           <div>
             <SiGithub />
             <a href='http://github.com/modestman1986' target='_blank'>
-              https://github.com/
+              Github
             </a>
           </div>
         </section>

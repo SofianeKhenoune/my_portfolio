@@ -1,30 +1,63 @@
-.project {
+.card {
+  height: 379px;
+  width: 300px;
+  background: #808080;
+  border-radius: 10px;
+  transition: background 0.8s;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 70px 63px -60px #000;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 3em;
-  flex: 1;
-  height: 300px;
-  @media screen and (max-width: 760px) {
-    flex-direction: column;
+  position: relative;
+  background: url('https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg')
+    center center no-repeat;
+  background-size: 300px;
+  &:hover {
+    background: url('https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg')
+      left center no-repeat;
+    background-size: 600px;
+    &:hover .border h2 {
+      opacity: 1;
+    }
+    &:hover .border .fa {
+      opacity: 1;
+    }
   }
-  h4 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  li {
-    line-height: 30px;
-    list-style-type: disc;
-  }
-  img {
-    margin-right: 60px;
+  .border {
+    height: 369px;
+    width: 290px;
+    background: transparent;
     border-radius: 10px;
-  }
-  div:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 250px;
+    transition: border 1s;
+    position: relative;
+    &:hover {
+      border: 1px solid #fff;
+    }
+    .title {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: red;
+      margin: 20px;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+    .icons {
+      position: absolute;
+      fill: #fff;
+      color: #fff;
+      height: 130px;
+      top: 226px;
+      width: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      .fa {
+        opacity: 0;
+        transition: opacity 1s;
+      }
+    }
   }
 }

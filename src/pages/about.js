@@ -10,7 +10,10 @@ const About = () => {
       </Head>
       <main className='main-block'>
         <section id={styles.about_me}>
-          <div id={styles.profil_img}>
+          <div
+            id={styles.profil_img}
+            className='flex-col items-center md:flex-row'
+          >
             <Image
               id={styles.img_profil}
               src='/images/profil_big.webp'

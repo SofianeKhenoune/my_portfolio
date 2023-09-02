@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Project from '../../components/Project/Project';
+import Project from '../../components/Project/Project-copy';
 
 const Projects = () => {
   return (
@@ -16,7 +16,8 @@ const Projects = () => {
             Voici les projets que j'ai déjà réalisés dans le cadre d'une
             formation antérieure
           </p>
-          <Project
+          <Project />
+          {/* <Project
             link='https://chalets-et-caviar-ai.sofiane-web-dev.fr/'
             bgImg='chaletsetcaviar.png'
             arrayOfIcons={[{ img: 'wordpress.png', altText: 'logo wordpress' }]}
@@ -28,7 +29,7 @@ const Projects = () => {
               { img: 'html_css.png', altText: 'logos HTML et CSS' },
             ]}
           />
-          {/*projets à faire  */}
+          *projets à faire  */}
           <h3>Projets à faire</h3>
         </section>
       </main>
