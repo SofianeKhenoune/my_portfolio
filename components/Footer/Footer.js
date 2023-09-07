@@ -6,7 +6,7 @@ import {
 } from 'react-icons/si';
 const Footer = () => {
   return (
-    <footer className='text-center border-t-4 border-gray-900 mt-3'>
+    <footer className=' mx-auto text-center border-t-4 border-gray-900 mt-3 w-[90%]'>
       <div className='flex justify-center flex-wrap mb-3 items-center'>
         <p>Portfolio codé en avec :</p>
         <div className='ml-3 flex'>

@@ -8,7 +8,12 @@ module.exports = {
     './public/**/*.html',
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'wp-project': "bg-[url('/img/chaletsetcaviar.png')]",
+        'html_css-project': "url('/img/lesfilmsdepleinair.png')",
+      },
+    },
   },
   plugins: [require('flowbite/plugin')],
 };

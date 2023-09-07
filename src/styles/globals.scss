@@ -12,9 +12,8 @@
 }
 html,
 body {
-  padding: 0 1em;
-  height: 100%;
-  background-color: var(--main-bg-color);
+  min-height: 100%;
+  background: radial-gradient(circle at 70%, #168d8f, #000);
   font-family: 'Roboto', Verdana, Tahoma, Arial, sans-serif;
   font-size: var(--main-font-size);
   color: var(--main-color-light);
@@ -35,8 +34,11 @@ h4 {
     position: relative;
     position: sticky;
     top: 0;
-    background-color: var(--main-bg-color);
     padding: var(--main-padding) 0;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(4px);
   }
 
   h1 {
@@ -47,7 +49,7 @@ h4 {
   /* Bloc général */
   .main-block {
     margin: 0 auto;
-    width: 90%;
+
     section {
       h2 {
         font-size: 30px;

@@ -1,25 +1,14 @@
-import Image from 'next/image';
-
 const Project = ({ link, bgImg, altText, arrayOfIcons }) => {
   return (
-    <div className='mb-20 relative'>
-      <a href={link} target='_blank'>
-        <Image
-          src={`/images/${bgImg}`}
-          alt={altText}
-          width={1000}
-          height={1000}
-        />
-      </a>
-      <div className=''>
+    <div
+      className='mb-20 w-[90%] h-64 relative'
+      style={{
+        background: `center / cover url('/images/${bgImg}') no-repeat`,
+      }}
+    >
+      <div className='icons absolute'>
         {arrayOfIcons.map((icon) => (
-          <Image
-            src={`/images/${icon.img}`}
-            alt={icon.altText}
-            width={200}
-            height={200}
-            key={icon.img}
-          />
+          <img src={`/images/${icon.img}`} alt={icon.altText} key={icon.img} />
         ))}
       </div>
     </div>

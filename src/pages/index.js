@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>Mon Portfolio</title>
       </Head>
-      <main className='main-block'>
+      <main className='main-block p-4'>
         <div className={styles.home_page}>
           <div className={styles.container}>
             <h1 className={styles.title}>Mon Portfolio</h1>

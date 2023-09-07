@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   }, []);
 
   return (
-    <div className='wrapper container mx-auto min-h-screen grid auto-rows-fr'>
+    <div className='wrapper min-h-screen grid auto-rows-fr'>
       <Header />
       {children}
       <Footer />
