@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 const NavBar = () => {
   const pathname = useRouter().pathname;
+  const [showNav, setShowNav] = useState(false);
   const navItemStyle =
     'block py-2 pl-3 pr-4 text-white rounded hover:bg-white hover:text-gray-900 md:border-0 md:p-2 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover:scale-110 transition duration-300 ease-in-out ';
   const navActiveItemStyle = `${navItemStyle} md:bg-gray-900`;
@@ -29,6 +31,9 @@ const NavBar = () => {
           className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
           aria-controls='navbar-default'
           aria-expanded='false'
+          onClick={() => {
+            setShowNav(!showNav);
+          }}
         >
           <span className='sr-only'>Open main menu</span>
           <svg
@@ -47,9 +52,20 @@ const NavBar = () => {
             />
           </svg>
         </button>
-        <div className='w-full md:block md:w-auto hidden' id='navbar-default'>
+        <div
+          className={
+            !showNav
+              ? 'w-full md:block md:w-auto hidden'
+              : 'w-full md:block md:w-auto'
+          }
+          id='navbar-default'
+        >
           <ul className='font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-2 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 '>
-            <li>
+            <li
+              onClick={() => {
+                setShowNav(false);
+              }}
+            >
               <Link
                 href='/about'
                 className={
@@ -59,7 +75,11 @@ const NavBar = () => {
                 About Me
               </Link>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                setShowNav(false);
+              }}
+            >
               <Link
                 href='/education'
                 className={
@@ -69,7 +89,11 @@ const NavBar = () => {
                 Education
               </Link>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                setShowNav(false);
+              }}
+            >
               <Link
                 href='/projects'
                 className={
@@ -79,7 +103,11 @@ const NavBar = () => {
                 Projects
               </Link>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                setShowNav(false);
+              }}
+            >
               <Link
                 href='/contact'
                 className={

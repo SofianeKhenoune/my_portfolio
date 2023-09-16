@@ -1,25 +1,25 @@
 import Link from 'next/link';
-import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 const NotFound = () => {
   const router = useRouter();
 
-  /*useEffect(() => {
-    setTimeout(() => {
-      // router.go(-1)
-      // router.go(1)
+  useEffect(() => {
+    const timer = setTimeout(() => {
       router.push('/');
-    }, 5000);
-  }, []);*/
+    }, 7000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <main className='main-block'>
-      <div className='not-found'>
-        <h1>Ooops...</h1>
+    <main className='main-block flex justify-center items-center'>
+      <div className='not-found text-2xl'>
+        <h1 className='text-7xl'>404</h1>
+        <p>Ooops...</p>
         <h2>That page cannot be found :( </h2>
         <p>
-          Going back to the <Link href='/'>Homepage</Link> is 5 seconds...
+          Going back to the <Link href='/'>Homepage</Link> is 7 seconds...
         </p>
       </div>
     </main>
