@@ -18,12 +18,6 @@ body {
   font-size: var(--main-font-size);
   color: var(--main-color-light);
 }
-h1,
-h2,
-h3,
-h4 {
-  font-size: 700;
-}
 
 /*GENERAL*/
 .wrapper {
@@ -41,21 +35,9 @@ h4 {
     -webkit-backdrop-filter: blur(4px);
   }
 
-  h1 {
-    a {
-      color: var(--main-color-light);
-    }
-  }
   /* Bloc général */
   .main-block {
     margin: 0 auto;
-
-    section {
-      h2 {
-        font-size: 30px;
-        font-weight: bold;
-      }
-    }
 
     strong {
       font-weight: bold;

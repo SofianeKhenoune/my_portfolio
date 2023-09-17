@@ -11,7 +11,7 @@ import {
   SiSass,
   SiTailwindcss,
 } from 'react-icons/si';
-import styles from '../styles/Education.module.scss';
+import EducationIcon from '../../components/EducationIcon/EducationIcon';
 const Education = () => {
   return (
     <>
@@ -19,57 +19,54 @@ const Education = () => {
         <title>Mon Portfolio - Education</title>
       </Head>
       <main className='main-block'>
-        <section id={styles.education}>
-          <h2>Formation</h2>
-          <h3>
+        <section className='flex flex-col justify-around text-center'>
+          <h2 className='text-5xl font-bold m-10'>Formation</h2>
+          <h3 className='mb-8'>
             Les langages et technologies avec lesquelles j'ai réalisé des
             projets :
           </h3>
-          <div className={styles.logos}>
-            <div className={styles.logo}>
-              <h4>HTML 5</h4>
+          <div className='flex flex-wrap justify-center gap-4 mb-8'>
+            <EducationIcon name='HTML 5' numStar={4}>
               <FaHtml5 color='#F25320' size={150} />
-            </div>
-            <div className={styles.logo}>
-              <h4>CSS 3</h4>
+            </EducationIcon>
+            <EducationIcon name='CSS 3' numStar={4}>
               <FaCss3Alt color='#2091EB' size={150} />
-            </div>
-            <div className={styles.logo}>
-              <h4 style={{ marginBottom: '0.5em' }}>JavaScript</h4>
+            </EducationIcon>
+            <EducationIcon name='JavaScript' numStar={4}>
               <SiJavascript
                 color='#e4d04b'
                 size={130}
-                style={{ borderRadius: '0.5em' }}
+                style={{ borderRadius: '0.5em', margin: '0.5em 0' }}
               />
-            </div>
-            <div className={styles.logo}>
-              <h4>PHP</h4>
+            </EducationIcon>
+
+            <EducationIcon name='PHP' numStar={4}>
               <FaPhp color='#7175aa' size={150} />
-            </div>
-            <div className={styles.logo}>
-              <h4>React</h4>
+            </EducationIcon>
+
+            <EducationIcon name='React' numStar={4}>
               <FaReact color='#359DCA' size={150} />
-            </div>
-            <div className={styles.logo}>
-              <h4>NextJs</h4>
+            </EducationIcon>
+
+            <EducationIcon name='NextJs' numStar={4}>
               <SiNextdotjs color='#000' size={150} />
-            </div>
-            <div className={styles.logo}>
-              <h4>MySQL</h4>
+            </EducationIcon>
+
+            <EducationIcon name='MySQL' numStar={4}>
               <SiMysql color='#7175aa' size={150} />
-            </div>
-            <div className={styles.logo}>
-              <h4>Sass</h4>
+            </EducationIcon>
+
+            <EducationIcon name='Sass' numStar={4}>
               <SiSass color='#d16ea0' size={150} />
-            </div>
-            <div className={styles.logo}>
-              <h4>Bootstrap</h4>
+            </EducationIcon>
+
+            <EducationIcon name='Bootstrap' numStar={4}>
               <SiBootstrap color='#8712fb' size={150} />
-            </div>
+            </EducationIcon>
           </div>
-          <h3>Les outils que je maîtrise:</h3>
-          <div className={styles.logos}>
-            <div className={styles.logo}>
+          <h3 className='mb-8'>Les outils que je maîtrise:</h3>
+          <div className='flex flex-wrap justify-center gap-4 mb-8'>
+            <div className='flex flex-col justify-center'>
               <h4>Figma</h4>
               <Image
                 src='/images/figma.webp'
@@ -78,12 +75,12 @@ const Education = () => {
                 alt='figma logo'
               />
             </div>
-            <div className={styles.logo}>
+            <div className='flex flex-col justify-center'>
               <h4>Git</h4>
               <SiGit color='#7175aa' size={150} />
             </div>
             <div
-              className={styles.logo}
+              className='flex flex-col justify-center'
               style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -94,18 +91,21 @@ const Education = () => {
               <h4>Mocodo</h4>
               <Image src='/images/mocodo.png' width={150} height={150} />
             </div>
-            <div className={styles.logo}>
+            <div className='flex flex-col justify-center'>
               <h4>Office</h4>
               <SiMicrosoftoffice color='#f40401' size={150} />
             </div>
           </div>
-          <h3> Les langages et technologies en cours d'acquisition :</h3>
-          <div className={styles.logos}>
-            <div className={styles.logo}>
+          <h3 className='mb-8'>
+            {' '}
+            Les langages et technologies en cours d'acquisition :
+          </h3>
+          <div className='flex flex-wrap justify-center gap-4 mb-8'>
+            <div className='flex flex-col justify-center'>
               <h4>Vue.js</h4>
               <Image src='/images/vuejs.svg' width={150} height={150} />
             </div>
-            <div className={styles.logo}>
+            <div className='flex flex-col justify-center'>
               <h4>Tailwind CSS</h4>
               <SiTailwindcss color='#08b7d4' size={150} />
             </div>
