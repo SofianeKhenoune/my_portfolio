@@ -12,10 +12,18 @@ const EducationIcon = ({ name, numStar, children }) => {
   }
 
   return (
-    <div className='flex flex-col justify-center mr-2'>
+    <div
+      className='flex flex-col justify-center m-3 p-2 rounded-xl'
+      style={{
+        background:
+          'radial-gradient(ellipse at bottom right,rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.40), #222)',
+        boxShadow: '0 8px 32px 0 rgba(255,255, 255, 0.15)',
+        backdropFilter: 'blur(5px)',
+      }}
+    >
       <h4>{name}</h4>
       {children}
-      <div className='flex justify-center'>
+      <div className='flex justify-center gap-1'>
         {arrayStars.map((star, index) => (
           <span key={index}>{star}</span>
         ))}

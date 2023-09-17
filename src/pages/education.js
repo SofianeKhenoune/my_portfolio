@@ -20,12 +20,12 @@ const Education = () => {
       </Head>
       <main className='main-block'>
         <section className='flex flex-col justify-around text-center'>
-          <h2 className='text-5xl font-bold m-10'>Formation</h2>
+          <h2 className='text-5xl font-bold my-10'>Formation</h2>
           <h3 className='mb-8'>
             Les langages et technologies avec lesquelles j'ai réalisé des
             projets :
           </h3>
-          <div className='flex flex-wrap justify-center gap-4 mb-8'>
+          <div className='flex flex-wrap justify-center mb-8'>
             <EducationIcon name='HTML 5' numStar={4}>
               <FaHtml5 color='#F25320' size={150} />
             </EducationIcon>
@@ -36,7 +36,10 @@ const Education = () => {
               <SiJavascript
                 color='#e4d04b'
                 size={130}
-                style={{ borderRadius: '0.5em', margin: '0.5em 0' }}
+                style={{
+                  borderRadius: '0.5em',
+                  margin: '0.5em 0',
+                }}
               />
             </EducationIcon>
 
@@ -94,11 +97,11 @@ const Education = () => {
           <h3 className='mb-8'>
             Les langages et technologies en cours d'acquisition :
           </h3>
-          <div className='flex flex-wrap justify-center gap-4 mb-8'>
+          <div className='flex flex-wrap justify-center mb-8'>
             <div className='flex flex-col justify-center'>
               <h4></h4>
             </div>
-            <EducationIcon name='Vue.js' numStar={3}>
+            <EducationIcon name='Vue.js' numStar={2}>
               <Image
                 src='/images/vuejs.svg'
                 width={150}
