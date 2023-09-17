@@ -32,7 +32,7 @@ const Education = () => {
             <EducationIcon name='CSS 3' numStar={4}>
               <FaCss3Alt color='#2091EB' size={150} />
             </EducationIcon>
-            <EducationIcon name='JavaScript' numStar={4}>
+            <EducationIcon name='JavaScript' numStar={3.5}>
               <SiJavascript
                 color='#e4d04b'
                 size={130}
@@ -40,7 +40,7 @@ const Education = () => {
               />
             </EducationIcon>
 
-            <EducationIcon name='PHP' numStar={4}>
+            <EducationIcon name='PHP' numStar={3.7}>
               <FaPhp color='#7175aa' size={150} />
             </EducationIcon>
 
@@ -66,49 +66,50 @@ const Education = () => {
           </div>
           <h3 className='mb-8'>Les outils que je maîtrise:</h3>
           <div className='flex flex-wrap justify-center gap-4 mb-8'>
-            <div className='flex flex-col justify-center'>
-              <h4>Figma</h4>
+            <EducationIcon name='Figma' numStar={3}>
               <Image
                 src='/images/figma.webp'
                 width={150}
                 height={150}
                 alt='figma logo'
               />
-            </div>
-            <div className='flex flex-col justify-center'>
-              <h4>Git</h4>
+            </EducationIcon>
+
+            <EducationIcon name='Git' numStar={3}>
               <SiGit color='#7175aa' size={150} />
-            </div>
-            <div
-              className='flex flex-col justify-center'
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'flex-start',
-                gap: '2em',
-              }}
-            >
-              <h4>Mocodo</h4>
-              <Image src='/images/mocodo.png' width={150} height={150} />
-            </div>
-            <div className='flex flex-col justify-center'>
-              <h4>Office</h4>
+            </EducationIcon>
+            <EducationIcon name='Mocodo' numStar={3}>
+              <Image
+                src='/images/mocodo.png'
+                width={150}
+                height={150}
+                alt='logo de Mocodo'
+                style={{ margin: '2.3em 0' }}
+              />
+            </EducationIcon>
+            <EducationIcon name='Office' numStar={3}>
               <SiMicrosoftoffice color='#f40401' size={150} />
-            </div>
+            </EducationIcon>
           </div>
           <h3 className='mb-8'>
-            {' '}
             Les langages et technologies en cours d'acquisition :
           </h3>
           <div className='flex flex-wrap justify-center gap-4 mb-8'>
             <div className='flex flex-col justify-center'>
-              <h4>Vue.js</h4>
-              <Image src='/images/vuejs.svg' width={150} height={150} />
+              <h4></h4>
             </div>
-            <div className='flex flex-col justify-center'>
-              <h4>Tailwind CSS</h4>
+            <EducationIcon name='Vue.js' numStar={3}>
+              <Image
+                src='/images/vuejs.svg'
+                width={150}
+                height={150}
+                alt='logo vuejs'
+                style={{ margin: '0.5em 0' }}
+              />
+            </EducationIcon>
+            <EducationIcon name='Tailwind CSS' numStar={3}>
               <SiTailwindcss color='#08b7d4' size={150} />
-            </div>
+            </EducationIcon>
           </div>
         </section>
       </main>
