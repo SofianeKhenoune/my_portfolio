@@ -1,5 +1,8 @@
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useEffect } from 'react';
 import { FaCss3Alt, FaHtml5, FaPhp, FaReact } from 'react-icons/fa';
 import {
   SiBootstrap,
@@ -12,7 +15,20 @@ import {
   SiTailwindcss,
 } from 'react-icons/si';
 import EducationIcon from '../../components/EducationIcon/EducationIcon';
+
+gsap.registerPlugin(ScrollTrigger);
 const Education = () => {
+  useEffect(() => {
+    gsap.to('#icon15', {
+      scrollTrigger: {
+        trigger: '#icon15',
+        toggleActions: 'restart pause none none',
+      },
+      rotation: 360,
+      x: 360,
+      duration: 3,
+    });
+  }, []);
   return (
     <>
       <Head>
@@ -26,13 +42,13 @@ const Education = () => {
             projets :
           </h3>
           <div className='flex flex-wrap justify-center mb-8'>
-            <EducationIcon name='HTML 5' numStar={4}>
+            <EducationIcon iconId='icon1' name='HTML 5' numStar={4}>
               <FaHtml5 color='#F25320' size={150} />
             </EducationIcon>
-            <EducationIcon name='CSS 3' numStar={4}>
+            <EducationIcon iconId='icon2' name='CSS 3' numStar={4}>
               <FaCss3Alt color='#2091EB' size={150} />
             </EducationIcon>
-            <EducationIcon name='JavaScript' numStar={3.5}>
+            <EducationIcon iconId='icon3' name='JavaScript' numStar={3.5}>
               <SiJavascript
                 color='#e4d04b'
                 size={130}
@@ -43,33 +59,33 @@ const Education = () => {
               />
             </EducationIcon>
 
-            <EducationIcon name='PHP' numStar={3.7}>
+            <EducationIcon iconId='icon4' name='PHP' numStar={3.7}>
               <FaPhp color='#7175aa' size={150} />
             </EducationIcon>
 
-            <EducationIcon name='React' numStar={4}>
+            <EducationIcon iconId='icon5' name='React' numStar={3}>
               <FaReact color='#359DCA' size={150} />
             </EducationIcon>
 
-            <EducationIcon name='NextJs' numStar={4}>
+            <EducationIcon iconId='icon6' name='NextJs' numStar={2.5}>
               <SiNextdotjs color='#000' size={150} />
             </EducationIcon>
 
-            <EducationIcon name='MySQL' numStar={4}>
+            <EducationIcon iconId='icon7' name='MySQL' numStar={3.5}>
               <SiMysql color='#7175aa' size={150} />
             </EducationIcon>
 
-            <EducationIcon name='Sass' numStar={4}>
+            <EducationIcon iconId='icon8' name='Sass' numStar={3}>
               <SiSass color='#d16ea0' size={150} />
             </EducationIcon>
 
-            <EducationIcon name='Bootstrap' numStar={4}>
+            <EducationIcon iconId='icon9' name='Bootstrap' numStar={2.5}>
               <SiBootstrap color='#8712fb' size={150} />
             </EducationIcon>
           </div>
           <h3 className='mb-8'>Les outils que je maîtrise:</h3>
           <div className='flex flex-wrap justify-center gap-4 mb-8'>
-            <EducationIcon name='Figma' numStar={3}>
+            <EducationIcon iconId='icon10' name='Figma' numStar={3}>
               <Image
                 src='/images/figma.webp'
                 width={150}
@@ -78,10 +94,10 @@ const Education = () => {
               />
             </EducationIcon>
 
-            <EducationIcon name='Git' numStar={3}>
+            <EducationIcon iconId='icon11' name='Git' numStar={3.5}>
               <SiGit color='#7175aa' size={150} />
             </EducationIcon>
-            <EducationIcon name='Mocodo' numStar={3}>
+            <EducationIcon iconId='icon12' name='Mocodo' numStar={3.5}>
               <Image
                 src='/images/mocodo.png'
                 width={150}
@@ -90,7 +106,7 @@ const Education = () => {
                 style={{ margin: '2.3em 0' }}
               />
             </EducationIcon>
-            <EducationIcon name='Office' numStar={3}>
+            <EducationIcon iconId='icon13' name='Office' numStar={4}>
               <SiMicrosoftoffice color='#f40401' size={150} />
             </EducationIcon>
           </div>
@@ -101,7 +117,7 @@ const Education = () => {
             <div className='flex flex-col justify-center'>
               <h4></h4>
             </div>
-            <EducationIcon name='Vue.js' numStar={2}>
+            <EducationIcon iconId='icon14' name='Vue.js' numStar={2}>
               <Image
                 src='/images/vuejs.svg'
                 width={150}
@@ -110,7 +126,7 @@ const Education = () => {
                 style={{ margin: '0.5em 0' }}
               />
             </EducationIcon>
-            <EducationIcon name='Tailwind CSS' numStar={3}>
+            <EducationIcon iconId='icon15' name='Tailwind CSS' numStar={3}>
               <SiTailwindcss color='#08b7d4' size={150} />
             </EducationIcon>
           </div>

@@ -1,5 +1,5 @@
 import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs';
-const EducationIcon = ({ name, numStar, children }) => {
+const EducationIcon = ({ name, numStar, children, iconId }) => {
   let arrayStars = [];
   for (let i = 1; i <= 5; i++) {
     if (i <= numStar) {
@@ -13,6 +13,7 @@ const EducationIcon = ({ name, numStar, children }) => {
 
   return (
     <div
+      id={iconId}
       className='flex flex-col justify-center m-3 p-2 rounded-xl'
       style={{
         background:
