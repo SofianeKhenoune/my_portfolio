@@ -14,7 +14,7 @@ const EducationIcon = ({ name, numStar, children, iconId }) => {
   return (
     <div
       id={iconId}
-      className='flex flex-col justify-center m-3 p-2 rounded-xl'
+      className='flex flex-col justify-center m-3 p-2 rounded-xl w-36 items-center hover:scale-110 transition'
       style={{
         background:
           'radial-gradient(ellipse at bottom right,rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.40), #222)',

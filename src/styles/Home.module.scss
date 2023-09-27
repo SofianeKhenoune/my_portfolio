@@ -9,11 +9,6 @@
   align-items: center;
   flex-direction: column;
   .container {
-    color: var(--main-color-dark);
-    text-align: center;
-    height: 90%;
-    width: 90%;
-    animation: slidein 4s 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -36,15 +31,5 @@
       border-radius: inherit;
       margin-top: 2em;
     }
-  }
-}
-
-@keyframes slidein {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }

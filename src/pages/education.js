@@ -1,5 +1,6 @@
-import { gsap } from 'gsap';
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+// import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import gsap from 'gsap';
+
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect } from 'react';
@@ -16,18 +17,24 @@ import {
 } from 'react-icons/si';
 import EducationIcon from '../../components/EducationIcon/EducationIcon';
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 const Education = () => {
   useEffect(() => {
-    gsap.to('#icon15', {
-      scrollTrigger: {
-        trigger: '#icon15',
-        toggleActions: 'restart pause none none',
-      },
-      rotation: 360,
-      x: 360,
-      duration: 3,
-    });
+    gsap.fromTo(
+      'h2',
+      { yPercent: 100, opacity: 0 },
+      { yPercent: 0, opacity: 1, duration: 4 }
+    );
+    gsap.fromTo(
+      'h3',
+      { x: -100, color: 'black', opacity: 0 },
+      { x: 0, color: 'white', duration: 4, ease: 'easein', opacity: 1 }
+    );
+    gsap.fromTo(
+      '.icons',
+      { x: 100, color: 'black', opacity: 0 },
+      { x: 0, color: 'white', duration: 4, ease: 'easein', opacity: 1 }
+    );
   }, []);
   return (
     <>
@@ -41,7 +48,7 @@ const Education = () => {
             Les langages et technologies avec lesquelles j'ai réalisé des
             projets :
           </h3>
-          <div className='flex flex-wrap justify-center mb-8'>
+          <div className='icons flex flex-wrap justify-center mb-8'>
             <EducationIcon iconId='icon1' name='HTML 5' numStar={4}>
               <FaHtml5 color='#F25320' size={150} />
             </EducationIcon>
@@ -84,7 +91,7 @@ const Education = () => {
             </EducationIcon>
           </div>
           <h3 className='mb-8'>Les outils que je maîtrise:</h3>
-          <div className='flex flex-wrap justify-center gap-4 mb-8'>
+          <div className='icons flex flex-wrap justify-center gap-4 mb-8'>
             <EducationIcon iconId='icon10' name='Figma' numStar={3}>
               <Image
                 src='/images/figma.webp'
@@ -113,7 +120,7 @@ const Education = () => {
           <h3 className='mb-8'>
             Les langages et technologies en cours d'acquisition :
           </h3>
-          <div className='flex flex-wrap justify-center mb-8'>
+          <div className='icons flex flex-wrap justify-center mb-8'>
             <div className='flex flex-col justify-center'>
               <h4></h4>
             </div>
