@@ -1,6 +1,5 @@
-// import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import gsap from 'gsap';
-
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect } from 'react';
@@ -17,13 +16,13 @@ import {
 } from 'react-icons/si';
 import EducationIcon from '../../components/EducationIcon/EducationIcon';
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 const Education = () => {
   useEffect(() => {
     gsap.fromTo(
       'h2',
-      { yPercent: 100, opacity: 0 },
-      { yPercent: 0, opacity: 1, duration: 4 }
+      { x: 100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 4 }
     );
     gsap.fromTo(
       'h3',
