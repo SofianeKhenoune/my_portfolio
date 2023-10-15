@@ -22,17 +22,17 @@ const Education = () => {
     gsap.fromTo(
       'h2',
       { x: 100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 4 }
+      { x: 0, opacity: 1, duration: 2 }
     );
     gsap.fromTo(
       'h3',
       { x: -100, color: 'black', opacity: 0 },
-      { x: 0, color: 'white', duration: 4, ease: 'easein', opacity: 1 }
+      { x: 0, color: 'white', duration: 2, ease: 'easein', opacity: 1 }
     );
     gsap.fromTo(
       '.icons',
       { x: 100, color: 'black', opacity: 0 },
-      { x: 0, color: 'white', duration: 4, ease: 'easein', opacity: 1 }
+      { x: 0, color: 'white', duration: 2, ease: 'easein', opacity: 1 }
     );
   }, []);
   return (

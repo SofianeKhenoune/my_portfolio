@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url(https://fonts.bunny.net/css?family=roboto:400,500,700);
+@import url(https://fonts.bunny.net/css?family=gothic-a1:400,500,700);
 @import '_root';
 
 * {
@@ -14,9 +15,13 @@ html,
 body {
   min-height: 100%;
   background: radial-gradient(circle at 50%, #168d8f, #000);
-  font-family: 'Roboto', Verdana, Tahoma, Arial, sans-serif;
+  font-family: 'Gothic A1', Verdana, Tahoma, Arial, sans-serif;
   font-size: var(--main-font-size);
   color: var(--main-color-light);
+  letter-spacing: 0.1em;
+}
+main {
+  padding: 1em;
 }
 
 /*GENERAL*/
