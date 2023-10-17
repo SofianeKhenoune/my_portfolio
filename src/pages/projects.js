@@ -18,7 +18,10 @@ const Projects = () => {
             link='https://chalets-et-caviar-ai.sofiane-web-dev.fr/'
             bgImg='chaletsetcaviar.png'
             altText="image page d'accueil d'un site web"
-            arrayOfIcons={[{ img: 'wordpress.png', altText: 'logo wordpress' }]}
+            arrayOfIcons={[
+              { img: 'wordpress.png', altText: 'logo wordpress' },
+              { img: 'php.png', altText: 'logo php' },
+            ]}
           />
           <Project
             link='https://les-films2plein-air.sofiane-web-dev.fr/'
