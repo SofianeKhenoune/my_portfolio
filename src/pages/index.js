@@ -7,16 +7,12 @@ import { useEffect } from 'react';
 export default function Home() {
   useEffect(() => {
     const tl = gsap.timeline();
-    tl.fromTo(
-      '.profil-image',
-      { x: -100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 2 }
-    );
-    tl.fromTo(
-      '.profil-text',
-      { x: 100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 2 }
-    );
+    const animation = { opacity: 0, duration: 1 };
+    tl.from('.profil-image', animation);
+    tl.from('.profil-text', animation);
+    tl.from('.myname', animation);
+    tl.from('.dwwm', animation);
+    tl.from('.presentation-link', animation);
   });
   return (
     <>
@@ -27,31 +23,48 @@ export default function Home() {
         <div className='h-full rounded-md'>
           <div className='container text-center w-full flex items-center flex-col md:flex-row md:items-stretch'>
             <Image
-              className='profil-image p-1 rounded-lg border-white border-solid border-l-8 border-2 shadow-md shadow-white mb-5'
+              className='profil-image mb-5 rounded-lg'
               src='/images/profil_big.webp'
               alt='photo de profil'
               width={400}
               height={400}
+              style={{ boxShadow: '0 8px 32px 0 rgba(255,255, 255, 0.30)' }}
             />
-            <div className='profil-text bg-slate-200 text-[#190f33] md:-ml-5 md:-mb-10 md:mt-10 rounded-lg shadow-md shadow-white font-bold p-5 flex items-center flex-col justify-around'>
-              <h1 className=''>Sofiane Khenoune</h1>
-              <p className='capitalize'>développeur web et web mobile</p>
+            <div
+              className='profil-text text-[#190f33] md:-ml-5 md:-mb-10 md:mt-10 rounded-lg font-bold p-5 flex items-center flex-col justify-around border-solid border-white border z-10'
+              style={{
+                boxShadow: '0 8px 32px 0 rgba(255,255, 255, 0.30)',
+                background: 'radial-gradient(circle at 50%, #4b7c7d, #000)',
+              }}
+            >
+              <Image
+                className='myname'
+                src='/images/myname.svg'
+                width={600}
+                height={100}
+                alt='Sofiane Khenoune'
+              />
+              <Image
+                className='dwwm'
+                src='/images/dwwm.svg'
+                width={600}
+                height={100}
+                alt='développeur web et web mobile'
+              />
               <Link
                 href='/about'
-                style={{
-                  background: 'radial-gradient(circle at 50%, #168d8f, #000)',
-                  boxShadow: '0 8px 32px 0 rgba(255,255, 255, 0.15)',
-                  backdropFilter: 'blur(5px)',
-                  color: '#fff',
-                  borderRadius: '1em',
-                  padding: '.5em 1em',
-                }}
+                className='presentation-link bg-gray-800 rounded-md border-solid border-white border'
+                style={{ boxShadow: '0 8px 32px 0 rgba(255,255, 255, 0.30)' }}
               >
-                Commençons par les présentations !
+                <img
+                  src='/images/presentations.svg'
+                  alt='boutton présentations'
+                />
               </Link>
             </div>
           </div>
         </div>
+        <dialog>je suis une modale</dialog>
       </main>
     </>
   );

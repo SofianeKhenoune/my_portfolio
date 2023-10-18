@@ -19,7 +19,6 @@ const NavBar = () => {
             alt='profil Logo'
             width={50}
             height={50}
-            priority={true}
           />
           <span className='self-center text-2xl font-semibold whitespace-nowrap dark:text-white max-[1030px]:hidden'>
             Sofiane Khenoune
