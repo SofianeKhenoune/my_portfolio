@@ -7,12 +7,15 @@ import { useEffect } from 'react';
 export default function Home() {
   useEffect(() => {
     const tl = gsap.timeline();
-    const animation = { opacity: 0, duration: 1 };
-    tl.from('.profil-image', animation);
-    tl.from('.profil-text', animation);
-    tl.from('.myname', animation);
-    tl.from('.dwwm', animation);
-    tl.from('.presentation-link', animation);
+    tl.fromTo('.profil-image', { opacity: 0 }, { opacity: 1, duration: 1 });
+    tl.fromTo('.profil-text', { opacity: 0 }, { opacity: 1, duration: 1 });
+    tl.fromTo('.myname', { opacity: 0 }, { opacity: 1, duration: 1 });
+    tl.fromTo('.dwwm', { opacity: 0 }, { opacity: 1, duration: 1 });
+    tl.fromTo(
+      '.presentation-link',
+      { opacity: 0 },
+      { opacity: 1, duration: 1 }
+    );
   });
   return (
     <>
@@ -20,7 +23,7 @@ export default function Home() {
         <title>Mon Portfolio</title>
       </Head>
       <main className='main-block text-white'>
-        <div className='h-full rounded-md'>
+        <div className='h-full rounded-md flex items-center justify-center'>
           <div className='container text-center w-full flex items-center flex-col md:flex-row md:items-stretch'>
             <Image
               className='profil-image mb-5 rounded-lg'
@@ -64,7 +67,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <dialog>je suis une modale</dialog>
       </main>
     </>
   );
