@@ -42,11 +42,11 @@ const Education = () => {
       </Head>
       <main className='main-block'>
         <section className='flex flex-col justify-around text-center'>
-          <h2 className='text-5xl font-bold my-10'>Formation</h2>
-          <h3 className='mb-8'>
+          <h1 className='text-5xl font-bold my-10'>Formation</h1>
+          <h2 className='mb-8'>
             Les langages et technologies avec lesquelles j'ai réalisé des
             projets :
-          </h3>
+          </h2>
           <div className='icons flex flex-wrap justify-center mb-8'>
             <EducationIcon iconId='icon1' name='HTML 5' numStar={4}>
               <FaHtml5 color='#F25320' size={150} />
@@ -87,6 +87,9 @@ const Education = () => {
 
             <EducationIcon iconId='icon9' name='Bootstrap' numStar={2.5}>
               <SiBootstrap color='#8712fb' size={150} />
+            </EducationIcon>
+            <EducationIcon iconId='icon15' name='Tailwind CSS' numStar={3.5}>
+              <SiTailwindcss color='#08b7d4' size={150} />
             </EducationIcon>
           </div>
           <h3 className='mb-8'>Les outils que je maîtrise:</h3>
@@ -131,9 +134,6 @@ const Education = () => {
                 alt='logo vuejs'
                 style={{ margin: '0.5em 0' }}
               />
-            </EducationIcon>
-            <EducationIcon iconId='icon15' name='Tailwind CSS' numStar={3}>
-              <SiTailwindcss color='#08b7d4' size={150} />
             </EducationIcon>
           </div>
         </section>

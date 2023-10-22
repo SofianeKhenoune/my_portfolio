@@ -34,7 +34,7 @@ export default function Home() {
               style={{ boxShadow: '0 8px 32px 0 rgba(255,255, 255, 0.30)' }}
             />
             <div
-              className='profil-text text-[#190f33] md:-ml-5 md:-mb-10 md:mt-10 rounded-lg font-bold p-5 flex items-center flex-col justify-around border-solid border-white border z-10'
+              className='profil-text text-[#190f33] md:-ml-5 md:-mb-50 md:mt-10 rounded-lg font-bold p-2 flex items-center flex-col justify-around border-solid border-white border z-10'
               style={{
                 boxShadow: '0 8px 32px 0 rgba(255,255, 255, 0.30)',
                 background: 'radial-gradient(circle at 50%, #4b7c7d, #000)',
@@ -56,7 +56,7 @@ export default function Home() {
               />
               <Link
                 href='/about'
-                className='presentation-link bg-gray-800 rounded-md border-solid border-white border'
+                className='presentation-link bg-gray-800 rounded-lg w-4/5'
                 style={{ boxShadow: '0 8px 32px 0 rgba(255,255, 255, 0.30)' }}
               >
                 <img

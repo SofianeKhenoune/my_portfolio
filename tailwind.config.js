@@ -9,9 +9,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'wp-project': "bg-[url('/img/chaletsetcaviar.png')]",
-        'html_css-project': "url('/img/lesfilmsdepleinair.png')",
+      width: {
+        95: '95%',
       },
     },
   },
