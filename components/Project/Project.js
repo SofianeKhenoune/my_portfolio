@@ -1,40 +1,87 @@
-import { useRef } from 'react';
+import PropTypes from 'prop-types';
+import { useState } from 'react';
 
-const Project = ({ bgImg, arrayOfIcons, children }) => {
-  const projectRef = useRef(null);
-  const onEnter = () => {};
-  const onLeave = () => {};
+const Project = ({
+  bgImg,
+  arrayOfIcons,
+  iconsWidth,
+  children,
+  projectName,
+}) => {
+  const multiIcons = arrayOfIcons.length > 1;
+  const [showDescProject, setShowDescProject] = useState(false);
+
+  const toggleShowDescProject = () => {
+    setShowDescProject((prev) => !prev);
+  };
 
   return (
     <div
-      className='project w-5/6 m-auto mb-10 rounded-3xl shadow-md shadow-white overflow-hidden cursor-pointer'
+      className='project w-5/6 m-auto mb-16 rounded-3xl shadow-md shadow-white'
       style={{
         background: `center / cover url('/images/${bgImg}') no-repeat`,
         boxShadow: '0 8px 32px 0 rgba(255,255, 255, 0.30)',
       }}
     >
       <div
-        className='bg-slate-100 p-1 rounded-lg flex items-center justify-center duration-1000 flex-col md:flex-row gap-5'
-        onMouseEnter={onEnter}
-        onMouseLeave={onLeave}
-        ref={projectRef}
+        className={`flex justify-between items-center absolute right-2 left-2 bottom-2 bg-gradient-to-r from-green-700 to-gray-900 hover:from-gray-900 hover:to-green-700 px-10 py-3 text-slate-50 text-lg font-bold italic rounded-2xl shadow shadow-stone-50 duration-1000 z-10 ${
+          showDescProject ? 'hidden' : 'block'
+        }`}
       >
-        <div className='flex items-center flex-wrap justify-center flex-1 p-3'>
+        <h2>{projectName}</h2>
+        <span
+          className='bg-slate-50 m-3 p-1 text-gray-950 font-bold rounded-full w-7 h-7 flex justify-center items-center cursor-pointer z-30'
+          title="Plus d'information"
+          onClick={toggleShowDescProject}
+        >
+          ?
+        </span>
+      </div>
+      <div
+        className={`z-0 bg-slate-100 p-1 rounded-3xl flex items-center justify-center transition duration-1000 flex-col lg:flex-row gap-5 ${
+          showDescProject ? 'opacity-100' : 'opacity-0'
+        }`}
+        onClick={() => {
+          setShowDescProject(false);
+        }}
+      >
+        <div
+          className={`flex items-center flex-wrap justify-center flex-1 h-full p-3 ${
+            multiIcons && 'gap-3'
+          }`}
+        >
           {arrayOfIcons.map((icon) => (
             <img
-              className='w-1/2 rounded-lg'
+              className={`${iconsWidth} rounded-lg`}
               src={`/images/${icon.img}`}
               alt={icon.altText}
               key={icon.img}
             />
           ))}
         </div>
-        <div className="bg-slate-200 p-6 rounded-3xl text-gray-950 flex-1 text-sm md:text-lg"> 
-            {children}
+        <div className='bg-slate-200 p-6 rounded-3xl text-gray-950 text-sm md:text-lg flex-1'>
+          {children}
         </div>
       </div>
     </div>
   );
+};
+
+Project.defaultProps = {
+  iconsWidth: 'w-1/2',
+};
+
+Project.propTypes = {
+  arrayOfIcons: PropTypes.arrayOf(
+    PropTypes.shape({
+      img: PropTypes.string.isRequired,
+      altText: PropTypes.string.isRequired,
+    })
+  ),
+  bgImg: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  iconsWidth: PropTypes.string,
+  projectName: PropTypes.string.isRequired,
 };
 
 export default Project;

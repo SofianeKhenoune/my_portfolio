@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs';
 const EducationIcon = ({ name, numStar, children, iconId }) => {
   let arrayStars = [];
@@ -17,7 +18,7 @@ const EducationIcon = ({ name, numStar, children, iconId }) => {
       className='flex flex-col justify-center m-3 p-2 rounded-xl w-36 items-center hover:scale-110 transition'
       style={{
         background:
-          'radial-gradient(ellipse at bottom right,rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.40), #222)',
+          'radial-gradient(ellipse at bottom right,rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.70), #000)',
         boxShadow: '0 8px 32px 0 rgba(255,255, 255, 0.15)',
         backdropFilter: 'blur(5px)',
       }}
@@ -31,6 +32,13 @@ const EducationIcon = ({ name, numStar, children, iconId }) => {
       </div>
     </div>
   );
+};
+
+EducationIcon.propTypes = {
+  children: PropTypes.node.isRequired,
+  iconId: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  numStar: PropTypes.number.isRequired,
 };
 
 export default EducationIcon;
