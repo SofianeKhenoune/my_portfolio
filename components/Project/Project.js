@@ -24,13 +24,13 @@ const Project = ({
       }}
     >
       <div
-        className={`flex justify-between items-center absolute right-2 left-2 bottom-2 bg-gradient-to-r from-green-700 to-gray-900 hover:from-gray-900 hover:to-green-700 px-10 py-3 text-slate-50 text-lg font-bold italic rounded-2xl shadow shadow-stone-50 duration-1000 z-10 ${
+        className={`flex justify-between items-center absolute right-2 left-2 bottom-2 bg-gradient-to-r from-green-700 to-gray-900 hover:from-gray-900 hover:to-green-700 px-3 py-3 text-slate-50 font-bold italic rounded-2xl shadow shadow-stone-50 duration-1000 z-10 ${
           showDescProject ? 'hidden' : 'block'
         }`}
       >
-        <h2>{projectName}</h2>
+        <h2 className='text-sm md:text-lg'>{projectName}</h2>
         <span
-          className='bg-slate-50 m-3 p-1 text-gray-950 font-bold rounded-full w-7 h-7 flex justify-center items-center cursor-pointer z-30'
+          className='bg-slate-50  p-1 text-gray-950 font-bold rounded-full w-7 h-7 flex justify-center items-center cursor-pointer z-30'
           title="Plus d'information"
           onClick={toggleShowDescProject}
         >
@@ -52,7 +52,7 @@ const Project = ({
         >
           {arrayOfIcons.map((icon) => (
             <img
-              className={`${iconsWidth} rounded-lg`}
+              className={`${iconsWidth}`}
               src={`/images/${icon.img}`}
               alt={icon.altText}
               key={icon.img}

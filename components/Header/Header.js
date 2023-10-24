@@ -2,7 +2,7 @@ import NavBar from './NavBar';
 
 const Header = () => {
   return (
-    <header className='mb-3 z-40'>
+    <header className='z-30 sticky left-0 right-0 top-0'>
       {/* menu navigation */}
       <NavBar />
     </header>

@@ -7,8 +7,8 @@ const NavBar = () => {
   const pathname = useRouter().pathname;
   const [showNav, setShowNav] = useState(false);
   const navItemStyle =
-    'block py-2 pl-3 pr-4 text-slate-50 rounded hover:bg-white hover:text-gray-900 md:border-0 md:p-2 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover:scale-110 transition duration-300 ease-in-out ';
-  const navActiveItemStyle = `${navItemStyle} md:bg-gray-100 text-gray-950 font-bold`;
+    'block py-2 px-4 text-slate-50 rounded hover:bg-white hover:text-gray-900 md:border-0 md:p-1 dark:hover:bg-gray-700 dark:hover:text-gray-950 md:dark:hover:bg-transparent hover:scale-110 transition duration-300 ease-in-out ';
+  const navActiveItemStyle = `${navItemStyle} md:bg-gray-700 text-gray-950 font-bold`;
   return (
     <nav className='border-gray-200 dark:bg-gray-900'>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between p-4 mx-auto'>

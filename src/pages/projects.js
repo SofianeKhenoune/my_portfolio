@@ -44,8 +44,8 @@ const Projects = () => {
       <Head>
         <title>Mon Portfolio - Projects</title>
       </Head>
-      <main className='container main-block p-4 text-center overflow-x-hidden'>
-        <section className='flex flex-col items-center'>
+      <main className=' p-4 text-center overflow-x-hidden'>
+        <section className='flex flex-col items-center w-full'>
           <h1 className='text-5xl font-bold my-10'>Projets</h1>
           <h2 className='text-2xl font-bold mx-auto my-8'>Projets Réalisés</h2>
           <Project
@@ -130,6 +130,9 @@ const Projects = () => {
               </li>
               <li className='bg-slate-50 mb-3 rounded-lg p-2'>
                 Framework Symfony (API Rest)
+              </li>
+              <li className='bg-slate-50 mb-3 rounded-lg p-2'>
+                Gestion du State avec Redux
               </li>
             </ul>
           </Project>
