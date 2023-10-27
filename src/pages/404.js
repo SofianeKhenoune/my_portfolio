@@ -8,18 +8,18 @@ const NotFound = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       router.push('/');
-    }, 5000);
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <main className='main-block flex justify-center items-center h-screen text-center'>
+    <main className='main-block flex justify-center items-center h-full text-center'>
       <div className='not-found text-3xl'>
         <h1 className='text-7xl '>404</h1>
         <p>Ooops...</p>
         <h2>That page cannot be found :( </h2>
         <p>
-          Going back to the <Link href='/'>Homepage</Link> in 5 seconds...
+          Going back to the <Link href='/'>Homepage</Link> in 3 seconds...
         </p>
       </div>
     </main>
