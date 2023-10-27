@@ -19,17 +19,3 @@ body {
   color: var(--main-color-light);
   letter-spacing: 0.1em;
 }
-
-/*GENERAL*/
-.wrapper {
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 100%;
-
-  /*HEADER*/
-  header {
-    // background: rgba(1, 1, 1, 0.7);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(4px);
-  }
-}

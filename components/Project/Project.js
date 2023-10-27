@@ -17,14 +17,14 @@ const Project = ({
 
   return (
     <div
-      className='project w-5/6 m-auto mb-16 rounded-3xl shadow-md shadow-white'
+      className='project w-5/6 m-auto mb-16 rounded-3xl shadow-md shadow-white opacity-0 translate-x-full'
       style={{
         background: `center / cover url('/images/${bgImg}') no-repeat`,
         boxShadow: '0 8px 32px 0 rgba(255,255, 255, 0.30)',
       }}
     >
       <div
-        className={`flex justify-between items-center absolute right-2 left-2 bottom-2 bg-gradient-to-r from-green-700 to-gray-900 hover:from-gray-900 hover:to-green-700 px-3 py-3 text-slate-50 font-bold italic rounded-2xl shadow shadow-stone-50 duration-1000 z-10 ${
+        className={`project-name flex justify-between items-center absolute right-2 left-2 bottom-2 bg-gradient-to-r from-green-700 to-gray-900 hover:from-gray-900 hover:to-green-700 px-3 py-3 text-slate-50 font-bold italic rounded-2xl shadow shadow-stone-50 z-10 ${
           showDescProject ? 'hidden' : 'block'
         }`}
       >

@@ -37,7 +37,7 @@ export default function Home() {
         <div className='flex-1'></div>
         <div
           className='profil-text font-bold p-2 flex items-center flex-col justify-around h-1/3 md:flex-1 md:h-full opacity-0
-          rounded-tl-full rounded-bl-full  rounded-tr-full rounded-br-full translate-x-full'
+          rounded-tl-full rounded-bl-full translate-x-full'
           style={{
             boxShadow: '0 8px 32px 0 rgba(255,255, 255, 0.30)',
             background: 'radial-gradient(circle at 50%, #4b7c7d, #000)',

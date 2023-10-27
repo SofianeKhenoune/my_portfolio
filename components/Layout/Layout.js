@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
   }, []);
 
   return (
-    <div className='wrapper min-h-screen grid auto-rows-fr w-full'>
+    <div className='min-h-screen grid auto-rows-fr w-full grid-rows-[auto_1fr_auto] grid-cols-[100%]'>
       {pathname !== '/' && <Header />}
       {children}
     </div>

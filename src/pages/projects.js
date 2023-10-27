@@ -1,4 +1,3 @@
-import { scrollTriggerAnimation } from '@/slectors/animations';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Head from 'next/head';
@@ -8,35 +7,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   useEffect(() => {
-    gsap.fromTo(
-      'h1',
-      { x: 100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 2 }
-    );
-    gsap.fromTo(
-      'h1 + h2',
-      { x: -100, color: 'black', opacity: 0 },
-      { x: 0, color: 'white', duration: 2, ease: 'easein', opacity: 1 }
-    );
     const projects = gsap.utils.toArray('.project');
-    projects.forEach((project, index) => {
-      if (index % 2 === 0) {
-        gsap.fromTo(project, scrollTriggerAnimation.fromLeft, {
-          ...scrollTriggerAnimation.to,
+    projects.forEach((project) => {
+      let tl = gsap
+        .timeline({
           scrollTrigger: {
             trigger: project,
-            toggleActions: 'play none none reset',
+            toggleActions: 'restart none none reset',
           },
+        })
+        .to(project, {
+          opacity: 1,
+          duration: 2,
+          translateX: 0,
+          ease: 'power1.out',
         });
-      } else {
-        gsap.fromTo(project, scrollTriggerAnimation.fromRight, {
-          ...scrollTriggerAnimation.to,
-          scrollTrigger: {
-            trigger: project,
-            toggleActions: 'play none none reset',
-          },
-        });
-      }
     });
   }, []);
   return (
