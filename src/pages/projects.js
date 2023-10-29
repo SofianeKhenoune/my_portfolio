@@ -2,6 +2,7 @@ import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Head from 'next/head';
 import { useEffect } from 'react';
+import { FaPhp, FaWordpress } from 'react-icons/fa';
 import Project from '../../components/Project/Project';
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,39 +30,18 @@ const Projects = () => {
       <Head>
         <title>Mon Portfolio - Projects</title>
       </Head>
-      <main className=' p-4 text-center overflow-x-hidden'>
-        <section className='flex flex-col items-center w-full'>
-          <h1 className='text-5xl font-bold my-10'>Projets</h1>
-          <h2 className='text-2xl font-bold mx-auto my-8'>Projets Réalisés</h2>
-          <Project
-            bgImg='chaletsetcaviar.png'
-            altText="image page d'accueil d'un site web"
-            arrayOfIcons={[
-              { img: 'wordpress.png', altText: 'logo wordpress' },
-              { img: 'php.png', altText: 'logo php' },
-            ]}
-            iconsWidth='w-5/12'
-            projectName='Chalets et Caviar'
-          >
-            <div className='flex flex-col items-center justify-between md:flex-row mb-5'>
-              <img src='/images/logo-openclassroom.png' className='w-32' />
-              <h2 className='font-bold'>
-                Projet de validation de parcours formation
-              </h2>
-            </div>
-            <ul>
-              <li className='bg-slate-50 mb-3 rounded-lg p-2'>
-                Mise en place d'un template Wordpress
-              </li>
-              <li className='bg-slate-50 mb-3 rounded-lg p-2'>
-                Utilsation d'Elementor
-              </li>
-              <li className='bg-slate-50 mb-3 rounded-lg p-2'>
-                Personnalisation avec PHP
-              </li>
-            </ul>
-          </Project>
-          <Project
+      <main className='w-full overflow-x-hidden pt-5 flex flex-wrap justify-around'>
+        <Project
+          arrayOfIcons={[FaWordpress, FaPhp]}
+          projectName='Chalets et Caviar'
+          taskList={[
+            'Projet de validation de parcours formation',
+            "Mise en place d'un template Wordpress",
+            "Utilsation d'Elementor",
+            'Personnalisation avec PHP',
+          ]}
+        />
+        {/*<Project
             bgImg='lesfilmsdepleinair.png'
             altText="image page d'accueil d'un site web"
             arrayOfIcons={[
@@ -155,8 +135,7 @@ const Projects = () => {
                 Framework Express Js
               </li>
             </ul>
-          </Project>
-        </section>
+          </Project>*/}
       </main>
     </>
   );

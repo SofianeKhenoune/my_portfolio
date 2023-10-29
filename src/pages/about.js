@@ -29,15 +29,15 @@ const About = () => {
       <Head>
         <title>Mon Portfolio - About Me</title>
       </Head>
-      <main className='main-block w-full overflow-x-hidden pt-5'>
-        <AboutBloc Icon={MdSchool}>
+      <main className='w-full overflow-x-hidden pt-5 flex flex-wrap justify-around'>
+        <AboutBloc Icon={MdSchool} title='Formation'>
           Je suis un développeur passionné et motivé qui a suivi une formation
           intensive de six mois en tant que développeur web et web mobile. Cette
           formation m'a permis d'acquérir les compétences nécessaires pour
           concevoir et développer des sites web, des applications web
           responsive.
         </AboutBloc>
-        <AboutBloc Icon={BiSolidInstitution}>
+        <AboutBloc Icon={BiSolidInstitution} title='Stage'>
           De plus, j'ai récemment terminé un stage de deux mois dans une
           entreprise de développement de logiciels (Consulting en sécurité). Au
           cours de ce stage, j'ai travaillé sur un projet d'application de
@@ -45,7 +45,7 @@ const About = () => {
           expérience précieuse dans la gestion de projets et la collaboration
           avec d'autres développeurs.
         </AboutBloc>
-        <AboutBloc Icon={AiFillProject}>
+        <AboutBloc Icon={AiFillProject} title='Expériences'>
           J'ai également réalisé deux projets personnels au cours de ma
           formation, démontrant ainsi ma capacité à travailler de manière
           autonome et à résoudre des problèmes manière créative. Ces projets
@@ -53,7 +53,7 @@ const About = () => {
           de ma formation de manière pratique et de me perfectionner dans la
           programmation.
         </AboutBloc>
-        <AboutBloc Icon={AiFillCheckCircle}>
+        <AboutBloc Icon={AiFillCheckCircle} title='Statut'>
           Je suis désormais prêt à relever de nouveaux défis et à contribuer à
           des projets de développement web pour apporter mon expertise technique
           et ma passion pour la programmation.

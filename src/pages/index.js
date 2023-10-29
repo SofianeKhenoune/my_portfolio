@@ -1,5 +1,4 @@
 import gsap from 'gsap';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
@@ -12,33 +11,35 @@ import {
   SiMinutemailer,
   SiPhp,
   SiReact,
+  SiRedux,
 } from 'react-icons/si';
 export default function Home() {
   useEffect(() => {
-    gsap.to('.profil-text', {
+    gsap.to('.profil-card', {
       opacity: 1,
       duration: 1,
-      borderRadius: 0,
       translateY: 0,
-      ease: 'expo.out',
+      ease: 'elastic',
+    });
+    gsap.to('.profil-img', {
+      opacity: 1,
+      duration: 1,
+      translateY: 0,
+      ease: 'elastic',
     });
   });
   return (
-    <>
-      <Head>
-        <title>Mon Portfolio</title>
-      </Head>
-      <main className='h-full flex flex-col md:flex-row overflow-hidden text-center'>
-        <div className='flex-1 flex flex-col md:flex:row justify-center items-center p-10'>
+    <main className='h-full flex flex-col md:flex-row p-10 gap-5'>
+      <div className='flex-1 flex items-center justify-center'>
+        <div className='profil-img flex flex-col md:flex:row justify-center items-center opacity-0 translate-y-10'>
           <Image
             src='/images/profil-home.png'
-            width={500}
-            height={500}
+            width={300}
+            height={300}
             alt='photo de profil'
-            className='rounded-full mb-6'
+            className='mb-6'
           />
           <Image
-            className='myname'
             src='/images/myname.svg'
             width={400}
             height={100}
@@ -46,71 +47,56 @@ export default function Home() {
             title='Sofiane Khenoune'
           />
         </div>
-        <div className='profil-text font-bold p-2 flex items-center flex-col justify-around h-1/2 md:flex-1 md:h-full opacity-0 rounded-tl-full rounded-tr-full translate-y-full shadow-xl shadow-slate-50'>
-          <div>
-            <h2 className='italic mb-5'>Les technologies</h2>
-            <div className='flex items-center'>
+      </div>
+      <div className='flex items-center justify-center flex-1 md:h-full'>
+        <div className='profil-card bg-medium border border-light p-5 rounded-lg opacity-0 translate-y-10'>
+          <h2 className='italic mb-5 text-xl font-bold border-b border-b-light pb-3'>
+            Développeur web et web mobile
+          </h2>
+
+          <p className='border-b border-b-light pb-3'>
+            Passionné de développement web et mobile, spécialisé en JavaScript
+            et React, je suis un développeur créatif et polyvalent. Fort d'une
+            expertise dans la création d'interfaces dynamiques et réactives, je
+            m'engage à concevoir des solutions innovantes pour offrir une
+            expérience utilisateur immersive et intuitive.
+          </p>
+
+          <div className='border-b border-b-light pb-3'>
+            <h2 className='italic mt-5 mb-2 font-bold'>Technologies</h2>
+            <div className='flex items-center gap-2'>
               <SiJavascript
-                className='javascript rounded-lg m-2 flex-1'
-                color='#e4d04b'
-                size={50}
+                className='javascript rounded-lg m-2'
+                size={30}
                 title='Logo Javascript'
               />
-              <SiReact
-                className='react m-2 flex-1'
-                color='#359DCA'
-                size={50}
-                title='Logo React'
-              />
-              <SiPhp
-                className='php m-2 flex-1'
-                color='#7175aa'
-                size={50}
-                title='Logo PHP'
-              />
+              <SiReact className='m-2' size={30} title='Logo React' />
+              <SiPhp className='m-2' size={30} title='Logo PHP' />
+              <SiRedux className='m-2' size={30} title='Logo PHP' />
             </div>
           </div>
           <div>
-            <h2 className='italic mb-5'>Me contacter</h2>
-            <div className='flex items-center'>
-              <Link href='tel:+33652294817' className='flex-1'>
-                <FaPhoneSquareAlt className='hover:scale-110 m-2' size={40} />
+            <h2 className='italic mt-5 mb-2 font-bold'>Me contacter</h2>
+            <div className='flex items-center gap-2'>
+              <Link href='tel:+33652294817'>
+                <FaPhoneSquareAlt className='hover:scale-125 m-2' size={30} />
               </Link>
-              <Link
-                href='mailto:sofianekhenoune.dev@gmail.com'
-                className='flex-1'
-              >
-                <SiMinutemailer className='hover:scale-110 m-2' size={40} />
+              <Link href='mailto:sofianekhenoune.dev@gmail.com'>
+                <SiMinutemailer className='hover:scale-125 m-2' size={30} />
               </Link>
               <Link
                 href='http://www.linkedin.com/in/sofianekhenoune'
                 target='_blank'
-                className='flex-1'
               >
-                <SiLinkedin className='hover:scale-110 m-2' size={40} />
+                <SiLinkedin className='hover:scale-125 m-2' size={30} />
               </Link>
-              <Link
-                href='http://github.com/modestman1986'
-                target='_blank'
-                className='flex-1'
-              >
-                <SiGithub className='hover:scale-110 m-2' size={40} />
+              <Link href='http://github.com/modestman1986' target='_blank'>
+                <SiGithub className='hover:scale-125 m-2' size={30} />
               </Link>
             </div>
           </div>
-          <Link
-            href='/about'
-            className='presentation-link bg-gray-800 rounded-lg w-4/5'
-            style={{ boxShadow: '0 8px 32px 0 rgba(255,255, 255, 0.30)' }}
-          >
-            <img
-              src='/images/presentations.svg'
-              alt='boutton présentations'
-              title='boutton pour aller sur la page about'
-            />
-          </Link>
         </div>
-      </main>
-    </>
+      </div>
+    </main>
   );
 }

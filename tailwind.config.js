@@ -8,10 +8,15 @@ module.exports = {
     './public/**/*.html',
   ],
   theme: {
-    extend: {
-      width: {
-        95: '95%',
-      },
+    colors: {
+      light: 'hsl(220,32%,30%)',
+      dark: 'hsl(234 84% 10%)',
+      medium: 'hsl(215, 50%, 15%)',
+      button: 'hsl(215,32%,60%)',
+      buttonHover: 'hsl(215, 50%, 30%)',
+    },
+    fontFamily: {
+      body: ['Gothic A1', 'Verdana', 'Tahoma', 'Arial', 'sans-serif'],
     },
   },
   plugins: [require('flowbite/plugin')],

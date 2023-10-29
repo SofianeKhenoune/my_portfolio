@@ -2,20 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url(https://fonts.bunny.net/css?family=roboto:400,500,700);
 @import '_root';
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-html,
-body {
-  min-height: 100%;
-  background: radial-gradient(circle at 50%, #243334, #000);
-  font-family: 'Gothic A1', Verdana, Tahoma, Arial, sans-serif;
-  font-size: var(--main-font-size);
-  color: var(--main-color-light);
-  letter-spacing: 0.1em;
-}
