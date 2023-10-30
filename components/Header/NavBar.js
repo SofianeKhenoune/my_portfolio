@@ -4,7 +4,8 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 const NavBar = () => {
-  const pathname = useRouter().pathname;
+  const router = useRouter();
+
   const [showNav, setShowNav] = useState(false);
   const navItemStyle =
     'block py-2 px-4 text-slate-50 rounded hover:bg-buttonHover hover:scale-105 transition duration-300';
@@ -12,10 +13,10 @@ const NavBar = () => {
   return (
     <nav className='border-gray-200 dark:bg-gray-900'>
       <div className='flex flex-wrap items-center justify-between p-4 mx-auto'>
-        <Link href='/' className='flex items-center border-white'>
+        <div className='flex items-center border-white'>
           <Image
-            src='/images/profil.webp'
-            className='mr-3 rounded-full'
+            src='/images/profil-home.png'
+            className='mr-3 rounded-full border border-light'
             alt='profil Logo'
             width={50}
             height={50}
@@ -23,7 +24,7 @@ const NavBar = () => {
           <span className='self-center text-2xl font-semibold whitespace-nowrap dark:text-white max-[1030px]:hidden'>
             Sofiane Khenoune
           </span>
-        </Link>
+        </div>
         <button
           data-collapse-toggle='navbar-default'
           type='button'
@@ -59,19 +60,19 @@ const NavBar = () => {
           }
           id='navbar-default'
         >
-          <ul className='font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-2 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 '>
+          <ul className='font-medium capitalize flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-2 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 '>
             <li
               onClick={() => {
                 setShowNav(false);
               }}
             >
               <Link
-                href='/about'
+                href='/'
                 className={
-                  pathname === '/about' ? navActiveItemStyle : navItemStyle
+                  router.pathname === '/' ? navActiveItemStyle : navItemStyle
                 }
               >
-                About Me
+                accueil
               </Link>
             </li>
             <li
@@ -80,12 +81,14 @@ const NavBar = () => {
               }}
             >
               <Link
-                href='/education'
+                href='#about'
                 className={
-                  pathname === '/education' ? navActiveItemStyle : navItemStyle
+                  router.pathname === '/about'
+                    ? navActiveItemStyle
+                    : navItemStyle
                 }
               >
-                Education
+                à propos
               </Link>
             </li>
             <li
@@ -94,12 +97,14 @@ const NavBar = () => {
               }}
             >
               <Link
-                href='/projects'
+                href='#education'
                 className={
-                  pathname === '/projects' ? navActiveItemStyle : navItemStyle
+                  router.pathname === '/#education'
+                    ? navActiveItemStyle
+                    : navItemStyle
                 }
               >
-                Projects
+                formation
               </Link>
             </li>
             <li
@@ -108,12 +113,30 @@ const NavBar = () => {
               }}
             >
               <Link
-                href='/contact'
+                href='#projects'
                 className={
-                  pathname === '/contact' ? navActiveItemStyle : navItemStyle
+                  router.pathname === '/#projects'
+                    ? navActiveItemStyle
+                    : navItemStyle
                 }
               >
-                Contact
+                projets
+              </Link>
+            </li>
+            <li
+              onClick={() => {
+                setShowNav(false);
+              }}
+            >
+              <Link
+                href='#contact'
+                className={
+                  router.pathname === '/#contact'
+                    ? navActiveItemStyle
+                    : navItemStyle
+                }
+              >
+                contact
               </Link>
             </li>
           </ul>

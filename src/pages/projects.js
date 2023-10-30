@@ -17,7 +17,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   useEffect(() => {
-    const projects = gsap.utils.toArray('.project');
+    const projects = gsap.utils.toArray('.bloc');
     projects.forEach((project) => {
       let tl = gsap
         .timeline({
@@ -29,7 +29,7 @@ const Projects = () => {
         .to(project, {
           opacity: 1,
           duration: 2,
-          translateX: 0,
+          translateY: 0,
           ease: 'power1.out',
         });
     });
@@ -48,7 +48,7 @@ const Projects = () => {
       />
       <Project
         arrayOfIcons={[SiHtml5, SiCss3, MdOutlineScreenshotMonitor]}
-        projectName='Chalets et Caviar'
+        projectName='Les Films de Plein Air'
         taskList={[
           "Rédaction d'un cahier des charges",
           'Intégration avec HTML5 et CSS3',
@@ -71,6 +71,23 @@ const Projects = () => {
           "Mise en place d'un template Wordpress",
           "Utilsation d'Elementor",
           'Personnalisation avec PHP',
+        ]}
+      />
+      <Project
+        arrayOfIcons={[
+          SiJavascript,
+          SiCss3,
+          SiReact,
+          SiRedux,
+          FaPhp,
+          SiSymphony,
+        ]}
+        projectName='Chalets et Caviar'
+        taskList={[
+          'Framework VueJs',
+          'Framework TailwindCSS',
+          'Utilsation de NodeJs',
+          'Framework Express Js',
         ]}
       />
       {/*
