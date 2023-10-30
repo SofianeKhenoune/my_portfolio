@@ -2,7 +2,7 @@ import PropTypes, { node } from 'prop-types';
 
 const Project = ({ arrayOfIcons, projectName, taskList }) => {
   return (
-    <div className='project flex flex-col opacity-0  border-light border translate-x-full  max-w-96 rounded-xl m-5 p-3 bg-medium backdrop-blur-[5px]'>
+    <div className='project opacity-0  border-light border translate-x-full  max-w-96 rounded-xl m-5 p-3 bg-medium h-min'>
       <h2 className='text-xl mb-5 border-b border-light p-2'>{projectName}</h2>
       <div className='text-sm mb-5 border-b border-light'>
         <ul className='pl-7 pb-3'>
@@ -13,7 +13,7 @@ const Project = ({ arrayOfIcons, projectName, taskList }) => {
       </div>
       <div className='flex items-center flex-wrap gap-2 justify-end'>
         {arrayOfIcons.map((Icon) => (
-          <Icon size={50} />
+          <Icon size={30} />
         ))}
       </div>
     </div>

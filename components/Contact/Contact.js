@@ -3,37 +3,23 @@ import { FaPhoneSquareAlt } from 'react-icons/fa';
 
 import { SiGithub, SiLinkedin, SiMinutemailer } from 'react-icons/si';
 
-const Contact = () => {
+const Contact = ({ iconSize }) => {
   return (
-    <div className='flex items-center'>
-      <Link href='tel:+33652294817' className='flex-1'>
-        <FaPhoneSquareAlt className='hover:scale-110 m-2' size={40} />
+    <div className='flex items-center gap-2'>
+      <Link href='tel:+33652294817'>
+        <FaPhoneSquareAlt className='hover:scale-125 m-1' size={iconSize} />
       </Link>
-      <Link href='mailto:sofianekhenoune.dev@gmail.com' className='flex-1'>
-        <SiMinutemailer className='hover:scale-110 m-2' size={40} />
+      <Link href='mailto:sofianekhenoune.dev@gmail.com'>
+        <SiMinutemailer className='hover:scale-125 m-1' size={iconSize} />
       </Link>
-      <Link
-        href='http://www.linkedin.com/in/sofianekhenoune'
-        target='_blank'
-        className='flex-1'
-      >
-        <SiLinkedin className='hover:scale-110 m-2' size={40} />
+      <Link href='http://www.linkedin.com/in/sofianekhenoune' target='_blank'>
+        <SiLinkedin className='hover:scale-125 m-1' size={iconSize} />
       </Link>
-      <Link
-        href='http://github.com/modestman1986'
-        target='_blank'
-        className='flex-1'
-      >
-        <SiGithub className='hover:scale-110 m-2' size={40} />
+      <Link href='http://github.com/modestman1986' target='_blank'>
+        <SiGithub className='hover:scale-125 m-1' size={iconSize} />
       </Link>
     </div>
   );
-};
-
-Contact.propTypes = {
-  Icon: PropTypes.elementType.isRequired,
-  children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
 };
 
 export default Contact;

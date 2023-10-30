@@ -1,8 +1,17 @@
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import Head from 'next/head';
 import { useEffect } from 'react';
 import { FaPhp, FaWordpress } from 'react-icons/fa';
+import { MdOutlineScreenshotMonitor } from 'react-icons/md';
+import {
+  SiCss3,
+  SiHtml5,
+  SiJavascript,
+  SiReact,
+  SiRedux,
+  SiSymphony,
+} from 'react-icons/si';
+
 import Project from '../../components/Project/Project';
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,47 +35,45 @@ const Projects = () => {
     });
   }, []);
   return (
-    <>
-      <Head>
-        <title>Mon Portfolio - Projects</title>
-      </Head>
-      <main className='w-full overflow-x-hidden pt-5 flex flex-wrap justify-around'>
-        <Project
-          arrayOfIcons={[FaWordpress, FaPhp]}
-          projectName='Chalets et Caviar'
-          taskList={[
-            'Projet de validation de parcours formation',
-            "Mise en place d'un template Wordpress",
-            "Utilsation d'Elementor",
-            'Personnalisation avec PHP',
-          ]}
-        />
-        {/*<Project
-            bgImg='lesfilmsdepleinair.png'
-            altText="image page d'accueil d'un site web"
-            arrayOfIcons={[
-              { img: 'html_css.png', altText: 'logos HTML et CSS' },
-            ]}
-            projectName='Les Films de Plain Air'
-          >
-            <div className='flex flex-col items-center justify-between md:flex-row mb-5'>
-              <img src='/images/logo-openclassroom.png' className='w-32' />
-              <h2 className='font-bold'>
-                Projet de validation de parcours formation
-              </h2>
-            </div>
-            <ul>
-              <li className='bg-slate-50 mb-3 rounded-lg p-2'>
-                Rédaction d'un cahier des charges
-              </li>
-              <li className='bg-slate-50 mb-3 rounded-lg p-2'>
-                Intégration avec HTML5 et CSS3
-              </li>
-              <li className='bg-slate-50 mb-3 rounded-lg p-2'>
-                Responsive Design
-              </li>
-            </ul>
-          </Project>
+    <main className='w-full overflow-x-hidden pt-5 flex flex-wrap gap-5 justify-center'>
+      <Project
+        arrayOfIcons={[FaWordpress, FaPhp]}
+        projectName='Chalets et Caviar'
+        taskList={[
+          'Projet de validation de parcours formation',
+          "Mise en place d'un template Wordpress",
+          "Utilsation d'Elementor",
+          'Personnalisation avec PHP',
+        ]}
+      />
+      <Project
+        arrayOfIcons={[SiHtml5, SiCss3, MdOutlineScreenshotMonitor]}
+        projectName='Chalets et Caviar'
+        taskList={[
+          "Rédaction d'un cahier des charges",
+          'Intégration avec HTML5 et CSS3',
+          'Charte graphique',
+          'Responsive Design',
+        ]}
+      />
+      <Project
+        arrayOfIcons={[
+          SiJavascript,
+          SiCss3,
+          SiReact,
+          SiRedux,
+          FaPhp,
+          SiSymphony,
+        ]}
+        projectName='Chalets et Caviar'
+        taskList={[
+          'Projet de validation de parcours formation',
+          "Mise en place d'un template Wordpress",
+          "Utilsation d'Elementor",
+          'Personnalisation avec PHP',
+        ]}
+      />
+      {/*
           <Project
             bgImg='writertalent.png'
             altText="image page d'accueil d'un site web"
@@ -136,8 +143,7 @@ const Projects = () => {
               </li>
             </ul>
           </Project>*/}
-      </main>
-    </>
+    </main>
   );
 };
 

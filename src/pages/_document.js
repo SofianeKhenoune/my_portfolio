@@ -7,7 +7,7 @@ export default function Document() {
         <link rel='icon' href='/images/profil-home.png' sizes='any' />
         <title>Sofiane - Portfolio</title>
       </Head>
-      <body className='text-white bg-dark min-h-full font-body tracking-wider'>
+      <body className='text-white bg-dark min-h-full font-body tracking-wider text-sm md:text-base'>
         <Main />
         <NextScript />
       </body>

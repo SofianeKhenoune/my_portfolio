@@ -11,7 +11,7 @@ const NavBar = () => {
   const navActiveItemStyle = `${navItemStyle} text-gray-950 border border-light`;
   return (
     <nav className='border-gray-200 dark:bg-gray-900'>
-      <div className='max-w-screen-xl flex flex-wrap items-center justify-between p-4 mx-auto'>
+      <div className='flex flex-wrap items-center justify-between p-4 mx-auto'>
         <Link href='/' className='flex items-center border-white'>
           <Image
             src='/images/profil.webp'

@@ -1,18 +1,10 @@
 import gsap from 'gsap';
 import Image from 'next/image';
-import Link from 'next/link';
-import { useEffect } from 'react';
-import { FaPhoneSquareAlt } from 'react-icons/fa';
 
-import {
-  SiGithub,
-  SiJavascript,
-  SiLinkedin,
-  SiMinutemailer,
-  SiPhp,
-  SiReact,
-  SiRedux,
-} from 'react-icons/si';
+import { useEffect } from 'react';
+
+import { SiJavascript, SiPhp, SiReact, SiRedux } from 'react-icons/si';
+import Contact from '../../components/Contact/Contact';
 export default function Home() {
   useEffect(() => {
     gsap.to('.profil-card', {
@@ -30,7 +22,7 @@ export default function Home() {
   });
   return (
     <main className='h-full flex flex-col md:flex-row p-10 gap-5'>
-      <div className='flex-1 flex items-center justify-center'>
+      <div className='flex items-center justify-center'>
         <div className='profil-img flex flex-col md:flex:row justify-center items-center opacity-0 translate-y-10'>
           <Image
             src='/images/profil-home.png'
@@ -66,34 +58,18 @@ export default function Home() {
             <h2 className='italic mt-5 mb-2 font-bold'>Technologies</h2>
             <div className='flex items-center gap-2'>
               <SiJavascript
-                className='javascript rounded-lg m-2'
+                className='javascript rounded-lg m-1'
                 size={30}
                 title='Logo Javascript'
               />
-              <SiReact className='m-2' size={30} title='Logo React' />
-              <SiPhp className='m-2' size={30} title='Logo PHP' />
-              <SiRedux className='m-2' size={30} title='Logo PHP' />
+              <SiReact className='m-1' size={30} title='Logo React' />
+              <SiPhp className='m-1' size={30} title='Logo PHP' />
+              <SiRedux className='m-1' size={30} title='Logo PHP' />
             </div>
           </div>
           <div>
             <h2 className='italic mt-5 mb-2 font-bold'>Me contacter</h2>
-            <div className='flex items-center gap-2'>
-              <Link href='tel:+33652294817'>
-                <FaPhoneSquareAlt className='hover:scale-125 m-2' size={30} />
-              </Link>
-              <Link href='mailto:sofianekhenoune.dev@gmail.com'>
-                <SiMinutemailer className='hover:scale-125 m-2' size={30} />
-              </Link>
-              <Link
-                href='http://www.linkedin.com/in/sofianekhenoune'
-                target='_blank'
-              >
-                <SiLinkedin className='hover:scale-125 m-2' size={30} />
-              </Link>
-              <Link href='http://github.com/modestman1986' target='_blank'>
-                <SiGithub className='hover:scale-125 m-2' size={30} />
-              </Link>
-            </div>
+            <Contact iconSize={30} />
           </div>
         </div>
       </div>

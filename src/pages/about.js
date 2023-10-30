@@ -29,7 +29,7 @@ const About = () => {
       <Head>
         <title>Mon Portfolio - About Me</title>
       </Head>
-      <main className='w-full overflow-x-hidden pt-5 flex flex-wrap justify-around'>
+      <main className='w-full overflow-x-hidden pt-5 flex flex-wrap gap-5 justify-center'>
         <AboutBloc Icon={MdSchool} title='Formation'>
           Je suis un développeur passionné et motivé qui a suivi une formation
           intensive de six mois en tant que développeur web et web mobile. Cette
