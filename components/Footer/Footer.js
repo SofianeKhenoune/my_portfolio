@@ -7,7 +7,7 @@ import {
 import Contact from '../Contact/Contact';
 const Footer = () => {
   return (
-    <footer className='bg-medium border-t md:text-base border-t-light h-20 p-4 flex md:justify-between flex-col justify-center items-center md:flex-row gap-2'>
+    <footer className='bg-medium border-t text-sm md:text-lg border-t-light h-20 p-4 flex md:justify-between flex-col justify-center items-center md:flex-row gap-2'>
       <div className='flex items-center gap-2  border-b border-b-light pb-1'>
         <p>Portfolio codé avec : </p>
         <SiJavascript className='m-1' />

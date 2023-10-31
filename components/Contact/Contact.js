@@ -5,7 +5,7 @@ import { SiGithub, SiLinkedin, SiMinutemailer } from 'react-icons/si';
 
 const Contact = ({ iconSize }) => {
   return (
-    <div className='flex items-center gap-2'>
+    <div className='bloc flex items-center gap-2'>
       <Link href='tel:+33652294817'>
         <FaPhoneSquareAlt
           className='hover:scale-125 m-1'
