@@ -4,65 +4,28 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 import { AiFillCheckCircle, AiFillProject } from 'react-icons/ai';
 import { BiSolidInstitution } from 'react-icons/bi';
-import { FaVuejs, FaWordpress } from 'react-icons/fa';
+import { FaPhp, FaVuejs, FaWordpress } from 'react-icons/fa';
 import { MdOutlineScreenshotMonitor, MdSchool } from 'react-icons/md';
 import {
-  SiBootstrap,
   SiCss3,
   SiExpress,
-  SiGit,
   SiHtml5,
   SiJavascript,
-  SiMicrosoftoffice,
-  SiMysql,
-  SiNextdotjs,
   SiNodedotjs,
   SiPhp,
   SiReact,
   SiRedux,
-  SiSass,
   SiSymphony,
   SiTailwindcss,
 } from 'react-icons/si';
 import AboutBloc from '../../components/AboutBloc/AboutBloc';
 import Contact from '../../components/Contact/Contact';
-import EducationIcon from '../../components/EducationIcon/EducationIcon';
 import Project from '../../components/Project/Project';
 
 gsap.registerPlugin(scrollTrigger);
 export default function Home() {
   useEffect(() => {
     const blocs = gsap.utils.toArray('.bloc');
-    const titles = gsap.utils.toArray('h2');
-    const contactLinks = gsap.utils.toArray('#contact .bloc a');
-    const tl = gsap.timeline();
-    contactLinks.forEach((link) => {
-      tl.fromTo(
-        link,
-        {
-          opacity: 0,
-        },
-        { opacity: 1, duration: 0.3 }
-      );
-    });
-    scrollTrigger.create({
-      animation: tl,
-      trigger: '#contact',
-      toggleActions: 'restart pause resume reset',
-    });
-    titles.forEach((title) => {
-      gsap.to(title, {
-        x: 0,
-        opacity: 1,
-        duration: 2,
-        borderBottom: '1px solid hsl(220,32%,30%)',
-        ease: 'elastic.out',
-        scrollTrigger: {
-          trigger: title,
-          toggleActions: 'restart pause resume reset',
-        },
-      });
-    });
     blocs.forEach((bloc) => {
       gsap.to(bloc, {
         opacity: 1,
@@ -75,13 +38,13 @@ export default function Home() {
         },
       });
     });
-  }, []);
+  });
   return (
     <main className='px-10 py-5'>
+
       <section
         className='home min-h-screen flex flex-col md:flex-row gap-5 items-center justify-center pt-20'
-        id='home'
-      >
+
         <div className='flex items-center justify-center'>
           <div className='bloc flex flex-col md:flex:row justify-center items-center opacity-0 translate-y-20'>
             <Image
@@ -90,7 +53,6 @@ export default function Home() {
               height={300}
               alt='photo de profil'
               className='mb-6 border border-light rounded-full p-1'
-              priority={1}
             />
             <Image
               src='/images/myname.svg'
@@ -102,7 +64,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className='flex items-center justify-center md:flex-1 md:h-full'>
+        <div className='flex items-center justify-center flex-1 md:h-full'>
           <div className='bloc bg-medium border border-light p-5 rounded-lg opacity-0 translate-y-20'>
             <h1 className='italic mb-5 text-xl font-bold border-b border-b-light pb-3'>
               Développeur web et web mobile
@@ -135,7 +97,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <section id='about' className='pt-10'>
         <h2 className='capitalize text-2xl font-bold mx-auto my-20 md:text-3xl opacity-0 -translate-x-10 max-w-max p-2'>
@@ -171,6 +133,7 @@ export default function Home() {
             technique et ma passion pour la programmation.
           </AboutBloc>
         </div>
+
       </section>
       <section id='projects' className='pt-10'>
         <h2 className='capitalize text-2xl font-bold mx-auto my-20 md:text-3xl opacity-0 -translate-x-10 max-w-max p-2'>
@@ -178,7 +141,7 @@ export default function Home() {
         </h2>
         <div className='flex flex-wrap gap-10 justify-center'>
           <Project
-            arrayOfIcons={[FaWordpress, SiPhp]}
+            arrayOfIcons={[FaWordpress, FaPhp]}
             projectName='Chalets et Caviar'
             taskList={[
               'Projet de validation de parcours formation',
@@ -203,7 +166,7 @@ export default function Home() {
               SiCss3,
               SiReact,
               SiRedux,
-              SiPhp,
+              FaPhp,
               SiSymphony,
             ]}
             projectName='Writer Talent'
