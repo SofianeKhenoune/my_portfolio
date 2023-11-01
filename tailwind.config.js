@@ -9,7 +9,7 @@ module.exports = {
   ],
   theme: {
     colors: {
-      light: 'hsl(220,32%,30%)',
+      light: 'hsl(220,32%,40%)',
       dark: 'hsl(234 84% 10%)',
       medium: 'hsl(215, 50%, 15%)',
       button: 'hsl(215,32%,60%)',

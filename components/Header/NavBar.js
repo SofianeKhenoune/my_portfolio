@@ -64,7 +64,7 @@ const NavBar = () => {
                 activeClass={navActiveItemStyle}
                 spy={true}
                 className={navItemStyle}
-                offset={0}
+                offset={-30}
                 duration={1000}
                 onClick={() => {
                   setShowNav(false);
@@ -79,7 +79,7 @@ const NavBar = () => {
                 activeClass={navActiveItemStyle}
                 spy={true}
                 className={navItemStyle}
-                offset={0}
+                offset={-50}
                 duration={1000}
                 onClick={() => {
                   setShowNav(false);
@@ -94,7 +94,7 @@ const NavBar = () => {
                 activeClass={navActiveItemStyle}
                 spy={true}
                 className={navItemStyle}
-                offset={0}
+                offset={-30}
                 duration={1000}
                 onClick={() => {
                   setShowNav(false);
@@ -109,7 +109,7 @@ const NavBar = () => {
                 activeClass={navActiveItemStyle}
                 spy={true}
                 className={navItemStyle}
-                offset={0}
+                offset={-30}
                 duration={1000}
                 onClick={() => {
                   setShowNav(false);
@@ -124,7 +124,7 @@ const NavBar = () => {
                 activeClass={navActiveItemStyle}
                 spy={true}
                 className={navItemStyle}
-                offset={0}
+                offset={-30}
                 duration={1000}
                 onClick={() => {
                   setShowNav(false);
