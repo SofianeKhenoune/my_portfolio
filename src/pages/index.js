@@ -79,7 +79,7 @@ export default function Home() {
   return (
     <main className='px-10 py-5'>
       <section
-        className='home min-h-screen flex flex-col md:flex-row gap-5 items-center justify-center'
+        className='home min-h-screen flex flex-col md:flex-row gap-5 items-center justify-center pt-20'
         id='home'
       >
         <div className='flex items-center justify-center'>
@@ -138,7 +138,7 @@ export default function Home() {
       </section>
 
       <section id='about' className='pt-10'>
-        <h2 className='capitalize text-2xl font-bold text-center my-20 md:text-3xl opacity-0 -translate-x-10'>
+        <h2 className='capitalize text-2xl font-bold mx-auto my-20 md:text-3xl opacity-0 -translate-x-10 max-w-max p-2'>
           à propos de moi
         </h2>
         <div className='flex flex-wrap gap-10 justify-center'>
@@ -173,7 +173,7 @@ export default function Home() {
         </div>
       </section>
       <section id='projects' className='pt-10'>
-        <h2 className='capitalize text-2xl font-bold text-center my-20 md:text-3xl opacity-0 -translate-x-10'>
+        <h2 className='capitalize text-2xl font-bold mx-auto my-20 md:text-3xl opacity-0 -translate-x-10 max-w-max p-2'>
           mes projets
         </h2>
         <div className='flex flex-wrap gap-10 justify-center'>
@@ -227,7 +227,7 @@ export default function Home() {
         </div>
       </section>
       <section id='education' className='pt-10'>
-        <h2 className='capitalize text-2xl font-bold text-center my-20 md:text-3xl opacity-0 -translate-x-10'>
+        <h2 className='capitalize text-2xl font-bold mx-auto my-20 md:text-3xl opacity-0 -translate-x-10 max-w-max p-2'>
           Formation
         </h2>
         <h3 className='py-10 text-center italic font-bold'>
@@ -322,7 +322,7 @@ export default function Home() {
         id='contact'
         className='pt-10 h-[calc(100vh-90px)] flex justify-center items-center flex-col'
       >
-        <h2 className='capitalize text-2xl font-bold text-center my-20 md:text-3xl opacity-0 -translate-x-10 max-w-min p-2'>
+        <h2 className='capitalize text-2xl font-bold mx-auto my-20 md:text-3xl opacity-0 -translate-x-10 max-w-max p-2'>
           Contact
         </h2>
         <Contact iconSize={50} />
