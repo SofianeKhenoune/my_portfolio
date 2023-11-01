@@ -24,6 +24,7 @@ import {
   SiSymphony,
   SiTailwindcss,
 } from 'react-icons/si';
+import { Link } from 'react-scroll';
 import AboutBloc from '../../components/AboutBloc/AboutBloc';
 import Contact from '../../components/Contact/Contact';
 import EducationIcon from '../../components/EducationIcon/EducationIcon';
@@ -137,8 +138,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id='about' className='pt-10'>
-        <h2 className='capitalize text-2xl font-bold text-center my-20 md:text-3xl opacity-0 -translate-x-10 max-w-max mx-auto p-2'>
+      <section id='about' className='pt-10 min-h-screen'>
+        <h2 className=' capitalize text-2xl font-bold text-center my-20 md:text-3xl opacity-0 -translate-x-10 max-w-max mx-auto p-2'>
           à propos de moi
         </h2>
         <div className='flex flex-wrap gap-10 justify-center'>
@@ -172,7 +173,7 @@ export default function Home() {
           </AboutBloc>
         </div>
       </section>
-      <section id='projects' className='pt-10'>
+      <section id='projects' className='pt-10 min-h-screen'>
         <h2 className='capitalize text-2xl font-bold text-center my-20 md:text-3xl opacity-0 -translate-x-10 max-w-max mx-auto p-2'>
           mes projets
         </h2>
@@ -226,7 +227,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id='education' className='pt-10'>
+      <section id='education' className='pt-10 min-h-screen'>
         <h2 className='capitalize text-2xl font-bold text-center my-20 md:text-3xl opacity-0 -translate-x-10 max-w-max mx-auto p-2'>
           Formation
         </h2>
@@ -318,6 +319,16 @@ export default function Home() {
           </EducationIcon>
         </div>
       </section>
+      <Link
+        to='home'
+        activeClass='block'
+        spy={true}
+        className='hidden'
+        offset={0}
+        duration={500}
+      >
+        Retourner en haut
+      </Link>
       <section
         id='contact'
         className='pt-10 h-[calc(100vh-90px)] flex justify-center items-center flex-col'

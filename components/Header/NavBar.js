@@ -1,15 +1,12 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useState } from 'react';
+import { Button, Link } from 'react-scroll';
 
 const NavBar = () => {
-  const router = useRouter();
-
   const [showNav, setShowNav] = useState(false);
   const navItemStyle =
-    'block py-2 px-4 text-slate-50 rounded hover:bg-buttonHover hover:scale-105 transition duration-300';
-  const navActiveItemStyle = `${navItemStyle} text-gray-950 border border-light`;
+    'block py-2 px-4 text-slate-50 rounded hover:bg-buttonHover hover:scale-105 transition duration-300 capitalize';
+  const navActiveItemStyle = `${navItemStyle} border border-light`;
   return (
     <nav className='border-gray-200 dark:bg-gray-900'>
       <div className='flex flex-wrap items-center justify-between p-4 mx-auto'>
@@ -60,86 +57,83 @@ const NavBar = () => {
           }
           id='navbar-default'
         >
-          <ul className='font-medium capitalize flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-2 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 '>
-            <li
-              onClick={() => {
-                setShowNav(false);
-              }}
-            >
+          <div className='font-medium capitalize flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-2 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 '>
+            <Button>
               <Link
-                href='/'
-                className={
-                  router.pathname === '/' ? navActiveItemStyle : navItemStyle
-                }
+                to='home'
+                activeClass={navActiveItemStyle}
+                spy={true}
+                className={navItemStyle}
+                offset={0}
+                duration={1000}
+                onClick={() => {
+                  setShowNav(false);
+                }}
               >
                 accueil
               </Link>
-            </li>
-            <li
-              onClick={() => {
-                setShowNav(false);
-              }}
-            >
+            </Button>
+            <Button>
               <Link
-                href='#about'
-                className={
-                  router.pathname === '/about'
-                    ? navActiveItemStyle
-                    : navItemStyle
-                }
+                to='about'
+                activeClass={navActiveItemStyle}
+                spy={true}
+                className={navItemStyle}
+                offset={0}
+                duration={1000}
+                onClick={() => {
+                  setShowNav(false);
+                }}
               >
                 à propos
               </Link>
-            </li>
-            <li
-              onClick={() => {
-                setShowNav(false);
-              }}
-            >
+            </Button>
+            <Button>
               <Link
-                href='#projects'
-                className={
-                  router.pathname === '/#projects'
-                    ? navActiveItemStyle
-                    : navItemStyle
-                }
+                to='projects'
+                activeClass={navActiveItemStyle}
+                spy={true}
+                className={navItemStyle}
+                offset={0}
+                duration={1000}
+                onClick={() => {
+                  setShowNav(false);
+                }}
               >
                 projets
               </Link>
-            </li>
-            <li
-              onClick={() => {
-                setShowNav(false);
-              }}
-            >
+            </Button>
+            <Button>
               <Link
-                href='#education'
-                className={
-                  router.pathname === '/#education'
-                    ? navActiveItemStyle
-                    : navItemStyle
-                }
+                to='education'
+                activeClass={navActiveItemStyle}
+                spy={true}
+                className={navItemStyle}
+                offset={0}
+                duration={1000}
+                onClick={() => {
+                  setShowNav(false);
+                }}
               >
                 formation
               </Link>
-            </li>
-            <li
-              onClick={() => {
-                setShowNav(false);
-              }}
-            >
+            </Button>
+            <Button>
               <Link
-                href='#contact'
-                className={
-                  router.pathname === '/#contact'
-                    ? navActiveItemStyle
-                    : navItemStyle
-                }
+                to='contact'
+                activeClass={navActiveItemStyle}
+                spy={true}
+                className={navItemStyle}
+                offset={0}
+                duration={1000}
+                onClick={() => {
+                  setShowNav(false);
+                }}
               >
                 contact
               </Link>
-            </li>
-          </ul>
+            </Button>
+          </div>
         </div>
       </div>
     </nav>
