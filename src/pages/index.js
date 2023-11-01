@@ -6,20 +6,28 @@ import { AiFillCheckCircle, AiFillProject } from 'react-icons/ai';
 import { BiSolidInstitution } from 'react-icons/bi';
 import { FaPhp, FaVuejs, FaWordpress } from 'react-icons/fa';
 import { MdOutlineScreenshotMonitor, MdSchool } from 'react-icons/md';
+
 import {
+  SiBootstrap,
   SiCss3,
   SiExpress,
+  SiGit,
   SiHtml5,
   SiJavascript,
+  SiMicrosoftoffice,
+  SiMysql,
+  SiNextdotjs,
   SiNodedotjs,
   SiPhp,
   SiReact,
   SiRedux,
+  SiSass,
   SiSymphony,
   SiTailwindcss,
 } from 'react-icons/si';
 import AboutBloc from '../../components/AboutBloc/AboutBloc';
 import Contact from '../../components/Contact/Contact';
+import EducationIcon from '../../components/EducationIcon/EducationIcon';
 import Project from '../../components/Project/Project';
 
 gsap.registerPlugin(scrollTrigger);
@@ -41,10 +49,7 @@ export default function Home() {
   });
   return (
     <main className='px-10 py-5'>
-
-      <section
-        className='home min-h-screen flex flex-col md:flex-row gap-5 items-center justify-center pt-20'
-
+      <section className='home min-h-screen flex flex-col md:flex-row gap-5 items-center justify-center pt-20'>
         <div className='flex items-center justify-center'>
           <div className='bloc flex flex-col md:flex:row justify-center items-center opacity-0 translate-y-20'>
             <Image
@@ -97,7 +102,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <section id='about' className='pt-10'>
         <h2 className='capitalize text-2xl font-bold mx-auto my-20 md:text-3xl opacity-0 -translate-x-10 max-w-max p-2'>
@@ -133,7 +138,6 @@ export default function Home() {
             technique et ma passion pour la programmation.
           </AboutBloc>
         </div>
-
       </section>
       <section id='projects' className='pt-10'>
         <h2 className='capitalize text-2xl font-bold mx-auto my-20 md:text-3xl opacity-0 -translate-x-10 max-w-max p-2'>
