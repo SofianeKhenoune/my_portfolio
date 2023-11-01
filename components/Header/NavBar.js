@@ -97,22 +97,6 @@ const NavBar = () => {
               }}
             >
               <Link
-                href='#education'
-                className={
-                  router.pathname === '/#education'
-                    ? navActiveItemStyle
-                    : navItemStyle
-                }
-              >
-                formation
-              </Link>
-            </li>
-            <li
-              onClick={() => {
-                setShowNav(false);
-              }}
-            >
-              <Link
                 href='#projects'
                 className={
                   router.pathname === '/#projects'
@@ -121,6 +105,22 @@ const NavBar = () => {
                 }
               >
                 projets
+              </Link>
+            </li>
+            <li
+              onClick={() => {
+                setShowNav(false);
+              }}
+            >
+              <Link
+                href='#education'
+                className={
+                  router.pathname === '/#education'
+                    ? navActiveItemStyle
+                    : navItemStyle
+                }
+              >
+                formation
               </Link>
             </li>
             <li
