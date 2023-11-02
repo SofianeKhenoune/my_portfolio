@@ -60,7 +60,7 @@ const NavBar = () => {
         >
           <div className='font-medium capitalize flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-2 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 '>
             {navBarItems.map((item) => (
-              <Button>
+              <Button key={item.name}>
                 <Link
                   to={item.to}
                   activeClass={navActiveItemStyle}
