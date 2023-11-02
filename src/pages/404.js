@@ -13,7 +13,7 @@ const NotFound = () => {
   }, []);
 
   return (
-    <main className='main-block flex justify-center items-center h-full text-center'>
+    <main className='main-block flex justify-center items-center h-[calc(100vh-90px)] text-center'>
       <div className='not-found text-3xl'>
         <h1 className='text-7xl '>404</h1>
         <p>Ooops...</p>

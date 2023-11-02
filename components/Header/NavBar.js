@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { Button, Link } from 'react-scroll';
+import { navBarItems } from '../../datas/header';
 
 const NavBar = () => {
   const [showNav, setShowNav] = useState(false);
   const navItemStyle =
-    'block py-2 px-4 text-slate-50 rounded hover:bg-buttonHover hover:scale-105 transition duration-300 capitalize';
-  const navActiveItemStyle = `${navItemStyle} border border-light`;
+    'block py-2 px-4 text-slate-50 rounded hover:bg-buttonHover hover:scale-105 transition duration-300 capitalize border border-transparent';
+  const navActiveItemStyle = `${navItemStyle} !border-light`;
   return (
     <nav className='border-gray-200 dark:bg-gray-900'>
       <div className='flex flex-wrap items-center justify-between p-4 mx-auto'>
@@ -58,81 +59,23 @@ const NavBar = () => {
           id='navbar-default'
         >
           <div className='font-medium capitalize flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-2 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 '>
-            <Button>
-              <Link
-                to='home'
-                activeClass={navActiveItemStyle}
-                spy={true}
-                className={navItemStyle}
-                offset={-30}
-                duration={1000}
-                onClick={() => {
-                  setShowNav(false);
-                }}
-              >
-                accueil
-              </Link>
-            </Button>
-            <Button>
-              <Link
-                to='about'
-                activeClass={navActiveItemStyle}
-                spy={true}
-                className={navItemStyle}
-                offset={-50}
-                duration={1000}
-                onClick={() => {
-                  setShowNav(false);
-                }}
-              >
-                à propos
-              </Link>
-            </Button>
-            <Button>
-              <Link
-                to='projects'
-                activeClass={navActiveItemStyle}
-                spy={true}
-                className={navItemStyle}
-                offset={-30}
-                duration={1000}
-                onClick={() => {
-                  setShowNav(false);
-                }}
-              >
-                projets
-              </Link>
-            </Button>
-            <Button>
-              <Link
-                to='education'
-                activeClass={navActiveItemStyle}
-                spy={true}
-                className={navItemStyle}
-                offset={-30}
-                duration={1000}
-                onClick={() => {
-                  setShowNav(false);
-                }}
-              >
-                formation
-              </Link>
-            </Button>
-            <Button>
-              <Link
-                to='contact'
-                activeClass={navActiveItemStyle}
-                spy={true}
-                className={navItemStyle}
-                offset={-30}
-                duration={1000}
-                onClick={() => {
-                  setShowNav(false);
-                }}
-              >
-                contact
-              </Link>
-            </Button>
+            {navBarItems.map((item) => (
+              <Button>
+                <Link
+                  to={item.to}
+                  activeClass={navActiveItemStyle}
+                  spy={true}
+                  className={navItemStyle}
+                  offset={item.offset}
+                  duration={item.duration}
+                  onClick={() => {
+                    setShowNav(false);
+                  }}
+                >
+                  {item.name}
+                </Link>
+              </Button>
+            ))}
           </div>
         </div>
       </div>

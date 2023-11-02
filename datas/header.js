@@ -1,4 +1,4 @@
-Je suis un développeur passionné et motivé qui a suivi une formation
+/*Je suis un développeur passionné et motivé qui a suivi une formation
 intensive de six mois en tant que développeur web et web mobile.
 Cette formation m'a permis d'acquérir les compétences nécessaires
 pour concevoir et développer des sites web, des applications web
@@ -21,5 +21,12 @@ dans la programmation.{' '}
 Je crois désormais être prêt à relever de nouveaux défis et à
 contribuer à des projets de développement web et mobile en espérant
 apporter mon expertise technique et ma passion pour la
-programmation.
-     
+programmation.*/
+
+export const navBarItems = [
+  { name: 'accueil', to: 'home', offset: -20, duration: 1000 },
+  { name: 'à propos', to: 'about', offset: -100, duration: 1000 },
+  { name: 'projets', to: 'projects', offset: -100, duration: 1000 },
+  { name: 'formation', to: 'education', offset: -100, duration: 1000 },
+  { name: 'contact', to: 'contact', offset: 0, duration: 1000 },
+];

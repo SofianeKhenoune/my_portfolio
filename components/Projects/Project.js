@@ -2,7 +2,7 @@ import PropTypes, { elementType } from 'prop-types';
 
 const Project = ({ arrayOfIcons, projectName, taskList }) => {
   return (
-    <div className='bloc opacity-0  border-light border translate-y-20  w-96 rounded-xl p-3 bg-medium h-min'>
+    <div className='bloc border-light border opacity-0 translate-y-20 w-full lg:w-96 rounded-xl p-3 bg-medium h-auto'>
       <h2 className='text-xl mb-5 border-b border-light p-2'>{projectName}</h2>
       <div className='text-sm mb-5 border-b border-light'>
         <ul className='pl-7 pb-3'>

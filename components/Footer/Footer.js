@@ -4,7 +4,7 @@ import {
   SiReact,
   SiTailwindcss,
 } from 'react-icons/si';
-import Contact from '../Contact/Contact';
+import ContactLinks from '../Contact/ContactLinks';
 const Footer = () => {
   return (
     <footer className='bg-medium border-t text-sm md:text-lg border-t-light h-20 p-4 flex md:justify-between flex-col justify-center items-center md:flex-row gap-2'>
@@ -17,7 +17,7 @@ const Footer = () => {
       </div>
       <div className='flex items-center gap-2 md:border-b md:border-b-light pb-1'>
         <p>Contact : </p>
-        <Contact />
+        <ContactLinks iconsSize={20} />
       </div>
     </footer>
   );
