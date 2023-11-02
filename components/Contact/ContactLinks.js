@@ -26,7 +26,7 @@ const ContactLinks = ({ iconsSize }) => {
         target='_blank'
       />
       <ContactItem
-        href='http://github.com/modestman1986'
+        href='https://github.com/SofianeKhenoune'
         title='Lien vers GitHub'
         Icon={SiGithub}
         iconSize={iconsSize}
