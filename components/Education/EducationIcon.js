@@ -1,19 +1,26 @@
 import PropTypes from 'prop-types';
-const EducationIcon = ({ iconName, skillLevel, children }) => {
+const EducationIcon = ({ Icon, iconName, iconColor, iconSize, skillLevel }) => {
   return (
-    <div className='bloc opacity-0 border-light border translate-y-20 w-56 rounded-xl p-3 gap-4 bg-medium h-auto flex flex-col justify-center items-center'>
-      <h4>{iconName}</h4>
-      {children}
-      <p>{skillLevel}</p>
+    <div className='bloc opacity-0 border-light border translate-y-20 w-56 rounded-xl p-3 gap-4 bg-medium h-auto flex flex-col justify-center items-center capitalize text-xl'>
+      <h4 className='font-bold'>{iconName}</h4>
+      <Icon color={iconColor} size={iconSize} title={`Logo ${iconName}`} />
+      <p className='italic bg-buttonHover px-2 py-1 border border-button rounded-lg'>
+        {skillLevel}
+      </p>
     </div>
   );
 };
 
+EducationIcon.defaultProps = {
+  iconColor: '#fff',
+  iconSize: 150,
+};
 EducationIcon.propTypes = {
-  children: PropTypes.node.isRequired,
-
-  name: PropTypes.string.isRequired,
-  nbStars: PropTypes.number.isRequired,
+  iconName: PropTypes.string.isRequired,
+  Icon: PropTypes.elementType.isRequired,
+  iconColor: PropTypes.string,
+  iconSize: PropTypes.number,
+  skillLevel: PropTypes.string.isRequired,
 };
 
 export default EducationIcon;

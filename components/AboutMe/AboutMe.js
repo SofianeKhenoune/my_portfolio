@@ -9,8 +9,12 @@ const AboutMe = () => {
         à propos de moi
       </h2>
       <div className='flex flex-wrap gap-10 justify-center'>
-        {aboutMeInfos.map((aboutBloc) => (
-          <AboutBloc Icon={aboutBloc.icon} title={aboutBloc.title}>
+        {aboutMeInfos.map((aboutBloc, index) => (
+          <AboutBloc
+            Icon={aboutBloc.icon}
+            title={aboutBloc.title}
+            key={aboutBloc.icon + index}
+          >
             {aboutBloc.text}
           </AboutBloc>
         ))}
