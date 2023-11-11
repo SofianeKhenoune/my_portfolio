@@ -30,6 +30,8 @@ const Projects = () => {
             "Utilsation d'Elementor",
             'Personnalisation avec PHP',
           ]}
+          projectImage='/images/chalets.jpg'
+          projectDesciption="Projet de validation de parcours pour la formation DWWM sur le site OpenClassroom. J'ai installé un thème et je l'ai personnalisé avec Elementor et PHP"
         />
         <Project
           arrayOfIcons={[SiHtml5, SiCss3, MdOutlineScreenshotMonitor]}

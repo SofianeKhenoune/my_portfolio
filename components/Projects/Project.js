@@ -1,9 +1,22 @@
 import PropTypes, { elementType } from 'prop-types';
+import Tooltip from '../Tooltip/Tooltip';
 
-const Project = ({ arrayOfIcons, projectName, taskList }) => {
+const Project = ({
+  arrayOfIcons,
+  projectName,
+  taskList,
+  projectDesciption,
+  projectImage,
+}) => {
   return (
     <div className='bloc border-light border opacity-0 translate-y-20 w-full lg:w-96 rounded-xl p-3 bg-medium h-auto'>
-      <h2 className='text-xl mb-5 border-b border-light p-2'>{projectName}</h2>
+      <div className='mb-3 flex justify-between'>
+        <h2 className='text-xl pb-2 border-b border-light'>{projectName}</h2>
+        <Tooltip>
+          <img src={projectImage} className='h-full' />
+          <p>{projectDesciption}</p>
+        </Tooltip>
+      </div>
       <div className='text-sm mb-5 border-b border-light'>
         <ul className='pl-7 pb-3'>
           {taskList.map((task, index) => (
@@ -26,6 +39,8 @@ Project.propTypes = {
   arrayOfIcons: PropTypes.arrayOf(elementType),
   projectName: PropTypes.string.isRequired,
   taskList: PropTypes.array.isRequired,
+  projectDesciption: PropTypes.string.isRequired,
+  projectImage: PropTypes.string.isRequired,
 };
 
 export default Project;

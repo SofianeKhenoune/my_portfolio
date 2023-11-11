@@ -4,7 +4,7 @@ const EducationIcon = ({ Icon, iconName, iconColor, iconSize, skillLevel }) => {
     <div className='bloc opacity-0 border-light border translate-y-20 w-56 rounded-xl p-3 gap-4 bg-medium h-auto flex flex-col justify-center items-center capitalize text-xl'>
       <h4 className='font-bold'>{iconName}</h4>
       <Icon color={iconColor} size={iconSize} title={`Logo ${iconName}`} />
-      <p className='italic bg-buttonHover px-2 py-1 border border-button rounded-lg'>
+      <p className='italic px-2 py-1 border border-light rounded-lg'>
         {skillLevel}
       </p>
     </div>
