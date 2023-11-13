@@ -58,7 +58,7 @@ export default function Home() {
     });
   }, []);
   return (
-    <main className='px-10 py-5'>
+    <main className='px-10'>
       <Profil />
       <AboutMe />
       <Projects />
