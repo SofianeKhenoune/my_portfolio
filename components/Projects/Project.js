@@ -1,5 +1,6 @@
+import { Tooltip } from 'flowbite-react';
 import PropTypes, { elementType } from 'prop-types';
-import Tooltip from '../Tooltip/Tooltip';
+import { CgArrowsExpandUpRight } from 'react-icons/cg';
 
 const Project = ({
   arrayOfIcons,
@@ -9,12 +10,25 @@ const Project = ({
   projectImage,
 }) => {
   return (
-    <div className='bloc border-light border opacity-0 translate-y-20 w-full lg:w-96 rounded-xl p-3 bg-medium h-auto'>
+    <div className='bloc border-light border opacity-0 translate-y-20 w-96 rounded-xl p-3 bg-medium h-auto'>
       <div className='mb-3 flex justify-between'>
         <h2 className='text-xl pb-2 border-b border-light'>{projectName}</h2>
-        <Tooltip>
-          <img src={projectImage} className='h-full' />
-          <p>{projectDesciption}</p>
+        <Tooltip
+          trigger='hover'
+          placement='left'
+          animation='duration-700'
+          className='w-full border-light border'
+          content={
+            <div className='flex flex-col justify-end w-full h-auto'>
+              <img src={projectImage} />
+              <p className='p-2'>{projectDesciption}</p>
+            </div>
+          }
+        >
+          <CgArrowsExpandUpRight
+            className='border border-light rounded-lg p-2 hover:cursor-pointer'
+            size={35}
+          />
         </Tooltip>
       </div>
       <div className='text-sm mb-5 border-b border-light'>

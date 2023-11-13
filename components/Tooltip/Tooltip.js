@@ -23,7 +23,7 @@ const Tooltip = (props) => {
       </button>
       {/* tooltip itself */}
       {tooltipIsOpen && (
-        <div className='absolute flex-col bg-scale-75 border border-e-light rounded-lg p-2 top-0 left-0 right-O bottom-0 justify-center items-center md:flex-row overflow-y-auto bg-medium'>
+        <div className='absolute bg-teal-50 flex-col bg-scale-75 border border-e-light rounded-lg p-2 top-0 left-0 right-O justify-center items-center md:flex-row text-gray-900 !z-50 transition duration-1000 ease-in-out'>
           {props.children}
         </div>
       )}

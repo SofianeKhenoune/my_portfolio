@@ -6,7 +6,7 @@ import { navBarItems } from '../../datas/header';
 const NavBar = () => {
   const [showNav, setShowNav] = useState(false);
   const navItemStyle =
-    'block py-2 px-4 text-slate-50 rounded hover:bg-buttonHover hover:scale-105 transition duration-300 capitalize border border-transparent';
+    'block py-2 px-4 text-slate-50 rounded hover:bg-buttonHover hover:scale-110 transition duration-300 capitalize border border-transparent';
   const navActiveItemStyle = `${navItemStyle} !border-light`;
   return (
     <nav className='border-gray-200 dark:bg-gray-900'>

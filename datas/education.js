@@ -46,7 +46,7 @@ export const languages = [
   {
     name: 'React',
     icon: SiReact,
-    skillLevel: 'avancé',
+    skillLevel: 'intermédiaire',
     size: 150,
     color: '#359DCA',
   },
@@ -60,7 +60,7 @@ export const languages = [
   {
     name: 'MySQL',
     icon: SiMysql,
-    skillLevel: 'avancé',
+    skillLevel: 'intermédiaire',
     size: 150,
     color: '#7175aa',
   },
@@ -81,7 +81,7 @@ export const languages = [
   {
     name: 'Tailwind CSS',
     icon: SiTailwindcss,
-    skillLevel: 'avancé',
+    skillLevel: 'intermédiaire',
     size: 150,
     color: '#08b7d4',
   },
@@ -98,7 +98,7 @@ export const tools = [
   {
     name: 'Git',
     icon: SiGit,
-    skillLevel: 'avancé',
+    skillLevel: 'intermédiaire',
     size: 150,
     color: '#7175aa',
   },

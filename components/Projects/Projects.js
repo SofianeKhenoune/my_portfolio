@@ -42,6 +42,8 @@ const Projects = () => {
             'Charte graphique',
             'Responsive Design',
           ]}
+          projectImage='/images/films.png'
+          projectDesciption="Projet de validation de parcours pour la formation DWWM sur le site OpenClassroom. J'ai réalisé le cahier des charges, la charte graphique et l'intégration avec HTML5 et CSS3"
         />
         <Project
           arrayOfIcons={[
@@ -59,6 +61,8 @@ const Projects = () => {
             'Framework Symfony (API Rest)',
             'Gestion du State avec Redux',
           ]}
+          projectImage='/images/writer.png'
+          projectDesciption="Projet de fin de formation DWWM avec O'Clock. C'est le fruit d'une collaboration qui a duré un mois. Ce projet dispose d'une API. Le front est déployé."
         />
         <Project
           arrayOfIcons={[FaVuejs, SiTailwindcss, SiNodedotjs, SiExpress]}
@@ -69,6 +73,8 @@ const Projects = () => {
             'Utilsation de NodeJs',
             'Framework Express Js',
           ]}
+          projectImage='/images/writer.png'
+          projectDesciption='Deuxième version du projet Writer Talent. En collaboration avec mon binôme (équipe front), nous recodons avec le framework VueJs'
         />
       </div>
     </Element>
