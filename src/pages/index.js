@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import scrollTrigger from 'gsap/dist/ScrollTrigger';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Element } from 'react-scroll';
 import AboutMe from '../../components/AboutMe/AboutMe';
 import ContactLinks from '../../components/Contact/ContactLinks';
@@ -10,6 +10,7 @@ import Projects from '../../components/Projects/Projects';
 
 gsap.registerPlugin(scrollTrigger);
 export default function Home() {
+  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     const blocs = gsap.utils.toArray('.bloc');
     const titles = gsap.utils.toArray('h2');

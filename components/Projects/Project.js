@@ -14,6 +14,7 @@ const Project = ({
       <div className='mb-3 flex justify-between'>
         <h2 className='text-xl pb-2 border-b border-light'>{projectName}</h2>
         <Tooltip
+          arrow={false}
           trigger='hover'
           placement='left'
           animation='duration-700'
