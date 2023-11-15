@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import { useState } from 'react';
 import { Button, Link } from 'react-scroll';
 import { navBarItems } from '../../datas/header';
+import ProfilHeader from './ProfilHeader';
 
 const NavBar = () => {
   const [showNav, setShowNav] = useState(false);
@@ -11,18 +11,7 @@ const NavBar = () => {
   return (
     <nav className='border-gray-200 dark:bg-gray-900'>
       <div className='flex flex-wrap items-center justify-between p-4 mx-auto'>
-        <div className='flex items-center border-white'>
-          <Image
-            src='/images/profil-home.png'
-            className='mr-3 rounded-full border border-light'
-            alt='profil Logo'
-            width={50}
-            height={50}
-          />
-          <span className='self-center text-2xl font-semibold whitespace-nowrap dark:text-white max-[1030px]:hidden'>
-            Sofiane Khenoune
-          </span>
-        </div>
+        <ProfilHeader />
         <button
           data-collapse-toggle='navbar-default'
           type='button'

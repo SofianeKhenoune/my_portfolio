@@ -1,4 +1,4 @@
-import { Tooltip } from 'flowbite-react';
+import Link from 'next/link';
 import PropTypes, { elementType } from 'prop-types';
 import { CgArrowsExpandUpRight } from 'react-icons/cg';
 
@@ -13,24 +13,12 @@ const Project = ({
     <div className='bloc border-light border opacity-0 translate-y-20 w-96 rounded-xl p-3 bg-medium h-auto'>
       <div className='mb-3 flex justify-between'>
         <h2 className='text-xl pb-2 border-b border-light'>{projectName}</h2>
-        <Tooltip
-          arrow={false}
-          trigger='hover'
-          placement='left'
-          animation='duration-700'
-          className='w-full border-light border'
-          content={
-            <div className='flex flex-col justify-end w-full h-auto'>
-              <img src={projectImage} />
-              <p className='p-2'>{projectDesciption}</p>
-            </div>
-          }
-        >
+        <Link href='/project'>
           <CgArrowsExpandUpRight
             className='border border-light rounded-lg p-2 hover:cursor-pointer'
             size={35}
           />
-        </Tooltip>
+        </Link>
       </div>
       <div className='text-sm mb-5 border-b border-light'>
         <ul className='pl-7 pb-3'>
