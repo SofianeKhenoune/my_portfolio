@@ -6,7 +6,7 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
 const Layout = ({ children }) => {
-  const isProjectPage = useRouter().pathname === '/project';
+  const isProjectPage = useRouter().pathname.includes('/project');
   useEffect(() => {
     initFlowbite();
   }, []);
@@ -15,7 +15,9 @@ const Layout = ({ children }) => {
     <>
       <Head>
         <link rel='icon' href='/images/profil-home.png' sizes='any' />
-        <title>Portfolio - Sofiane Khenoune, Développeur Web</title>
+        <title>
+          Portfolio - Sofiane Khenoune - Développeur Web et Web Mobile
+        </title>
       </Head>
       <div className='min-h-screen grid auto-rows-fr grid-rows-[auto_1fr_auto] grid-cols-[100%]'>
         {!isProjectPage && <Header />}

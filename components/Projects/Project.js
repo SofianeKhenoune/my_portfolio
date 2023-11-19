@@ -2,18 +2,12 @@ import Link from 'next/link';
 import PropTypes, { elementType } from 'prop-types';
 import { CgArrowsExpandUpRight } from 'react-icons/cg';
 
-const Project = ({
-  arrayOfIcons,
-  projectName,
-  taskList,
-  projectDesciption,
-  projectImage,
-}) => {
+const Project = ({ arrayOfIcons, projectName, taskList, slug }) => {
   return (
     <div className='bloc border-light border opacity-0 translate-y-20 w-96 rounded-xl p-3 bg-medium h-auto'>
       <div className='mb-3 flex justify-between'>
         <h2 className='text-xl pb-2 border-b border-light'>{projectName}</h2>
-        <Link href='/project'>
+        <Link href={`/project/${slug}`}>
           <CgArrowsExpandUpRight
             className='border border-light rounded-lg p-2 hover:cursor-pointer'
             size={35}
@@ -42,8 +36,7 @@ Project.propTypes = {
   arrayOfIcons: PropTypes.arrayOf(elementType),
   projectName: PropTypes.string.isRequired,
   taskList: PropTypes.array.isRequired,
-  projectDesciption: PropTypes.string.isRequired,
-  projectImage: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
 };
 
 export default Project;
