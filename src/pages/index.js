@@ -60,7 +60,7 @@ export default function Home() {
     });
   }, []);
   return (
-    <main className='px-10'>
+    <main className='px-10 pt-5'>
       <Profil />
       <AboutMe />
       <p id='projects'></p>

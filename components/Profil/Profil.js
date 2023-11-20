@@ -13,8 +13,8 @@ const Profil = () => {
         <div className='bloc flex flex-col md:flex:row justify-center items-center opacity-0 translate-y-20'>
           <Image
             src='/images/profil-home.png'
-            width={300}
-            height={300}
+            width={250}
+            height={250}
             alt='photo de profil'
             className='mb-6 border border-light rounded-full p-1'
             priority={1}
