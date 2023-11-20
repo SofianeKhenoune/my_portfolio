@@ -64,6 +64,7 @@ const ProjectPage = () => {
                   src={project.img}
                   alt={project.title}
                   className='rounded-xl w-full lg:w-auto lg:float-left mb-3 lg:mr-5 border border-light'
+                  priority={true}
                 />
                 <h1 className='text-xl lg:text-3xl pb-2 mb-3 border-b border-light'>
                   {project.title}
