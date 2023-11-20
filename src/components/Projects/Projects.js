@@ -1,6 +1,6 @@
 import { Element } from 'react-scroll';
-import Project from '../../components/Projects/Project';
 import { projects } from '../../datas/projects';
+import Project from './Project';
 const Projects = () => {
   return (
     <Element name='projects' className='min-h-screen'>

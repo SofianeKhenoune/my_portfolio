@@ -1,7 +1,7 @@
+import Layout from '@/components/Layout/Layout';
+import Spinner from '@/components/Spinner/Spinner';
 import '@/styles/globals.scss';
 import { useEffect, useState } from 'react';
-import Layout from '../../components/Layout/Layout';
-import Spinner from '../../components/Spinner/Spinner';
 
 /**
  * Renders the App component.

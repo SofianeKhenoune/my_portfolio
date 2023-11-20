@@ -1,13 +1,13 @@
+import AboutMe from '@/components/AboutMe/AboutMe';
+import ContactLinks from '@/components/Contact/ContactLinks';
+import Education from '@/components/Education/Education';
+import Profil from '@/components/Profil/Profil';
+import Projects from '@/components/Projects/Projects';
 import gsap from 'gsap';
 import scrollTrigger from 'gsap/dist/ScrollTrigger';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { Element } from 'react-scroll';
-import AboutMe from '../../components/AboutMe/AboutMe';
-import ContactLinks from '../../components/Contact/ContactLinks';
-import Education from '../../components/Education/Education';
-import Profil from '../../components/Profil/Profil';
-import Projects from '../../components/Projects/Projects';
 
 gsap.registerPlugin(scrollTrigger);
 export default function Home() {
