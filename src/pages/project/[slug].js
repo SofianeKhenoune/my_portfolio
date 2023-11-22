@@ -38,33 +38,34 @@ const ProjectPage = () => {
       </Head>
       {/* If loading is true, render the project page content*/}
       {loading ? (
-        <main className='h-auto flex flex-col justify-between p-10'>
+        <main className='flex flex-col justify-between p-10'>
           {/* Project content */}
-          <div className='flex-1 bloc border-light border opacity-0 translate-y-20 rounded-xl bg-medium mt-20'>
-            <div key={project.slug} className='p-3'>
-              {/* Project image */}
-              <Image
-                width={400}
-                height={400}
-                src={project.img}
-                alt={project.title}
-                className='rounded-xl w-full lg:w-auto lg:float-left mb-3 lg:mr-5 border border-light'
-                priority
-              />
-              {/* Project title */}
-              <h1 className='text-xl font-bold lg:text-3xl pb-2 mb-3 border-b border-light'>
-                {project.title}
-              </h1>
-              {/* Project description */}
-              <p className='text-justify text-base md:text-lg leading-7 lg:leading-9'>
-                {project.desc}
-              </p>
-              {/* Project icons */}
-              <div className='flex items-center flex-wrap gap-2 justify-end border-t border-light mt-5 pt-5'>
-                {project.icons.map((Icon, index) => (
-                  <Icon size={30} key={Icon + index} />
-                ))}
-              </div>
+          <div
+            key={project.slug}
+            className='p-3 bloc border-light border opacity-0 translate-y-20 rounded-xl bg-medium'
+          >
+            {/* Project image */}
+            <Image
+              width={400}
+              height={400}
+              src={project.img}
+              alt={project.title}
+              className='rounded-xl w-full lg:w-auto lg:float-left mb-3 lg:mr-5 border border-light'
+              priority
+            />
+            {/* Project title */}
+            <h1 className='text-xl font-bold lg:text-3xl pb-2 mb-3 border-b border-light'>
+              {project.title}
+            </h1>
+            {/* Project description */}
+            <p className='text-justify text-base md:text-lg leading-7 lg:leading-9'>
+              {project.desc}
+            </p>
+            {/* Project icons */}
+            <div className='flex items-center flex-wrap gap-2 justify-end border-t border-light mt-5 pt-5'>
+              {project.icons.map((Icon, index) => (
+                <Icon size={30} key={Icon + index} />
+              ))}
             </div>
           </div>
         </main>

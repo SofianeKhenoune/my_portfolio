@@ -6,7 +6,7 @@ import ContactLinks from '../Contact/ContactLinks';
 const Profil = () => {
   return (
     <Element
-      className='min-h-screen flex flex-col md:flex-row gap-5 items-center justify-center pt-20'
+      className='min-h-screen flex flex-col md:flex-row gap-5 items-center justify-center pt-8'
       name='home'
       id='home'
     >

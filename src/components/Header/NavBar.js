@@ -9,7 +9,7 @@ const NavBar = () => {
   const [showNav, setShowNav] = useState(false);
   const isProjectPage = useRouter().pathname.includes('/project');
   const navItemStyle =
-    'block py-2 px-4 text-slate-50 rounded hover:bg-buttonHover hover:scale-110 transition duration-300 capitalize border border-transparent';
+    'block py-2 px-4 text-slate-50 rounded hover:bg-buttonHover hover:scale-110 transition duration-300 capitalize border border-transparent text-center';
   const navActiveItemStyle = `${navItemStyle} !border-light`;
   return (
     <nav className='border-gray-200 dark:bg-gray-900'>
@@ -50,7 +50,7 @@ const NavBar = () => {
           }
           id='navbar-default'
         >
-          <div className='font-medium capitalize flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-2 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 '>
+          <div className='font-medium capitalize bg-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-2 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
             {navBarItems.map((item, index) =>
               isProjectPage ? (
                 <Link
