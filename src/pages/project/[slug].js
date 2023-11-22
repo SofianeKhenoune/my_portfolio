@@ -73,7 +73,7 @@ const ProjectPage = () => {
                   priority
                 />
                 {/* Project title */}
-                <h1 className='text-xl lg:text-3xl pb-2 mb-3 border-b border-light'>
+                <h1 className='text-xl font-bold lg:text-3xl pb-2 mb-3 border-b border-light'>
                   {project.title}
                 </h1>
                 {/* Project description */}
