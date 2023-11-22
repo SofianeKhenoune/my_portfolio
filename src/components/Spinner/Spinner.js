@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Spinner = () => {
   return (
     // Main container
-    <main className='flex flex-col justify-center items-center h-screen'>
+    <main className='flex bloc flex-col justify-center items-center h-screen'>
       {/* Profile image */}
       <Image
         src='/images/profil-home.png'
