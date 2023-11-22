@@ -8,6 +8,7 @@ const Profil = () => {
     <Element
       className='min-h-screen flex flex-col md:flex-row gap-5 items-center justify-center pt-20'
       name='home'
+      id='home'
     >
       <div className='flex items-center justify-center'>
         <div className='bloc flex flex-col md:flex:row justify-center items-center opacity-0 translate-y-20'>

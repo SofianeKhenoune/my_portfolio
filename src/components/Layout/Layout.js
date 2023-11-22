@@ -1,12 +1,10 @@
 import { initFlowbite } from 'flowbite';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
 const Layout = ({ children }) => {
-  const isProjectPage = useRouter().pathname.includes('/project');
   useEffect(() => {
     initFlowbite();
   }, []);
@@ -20,9 +18,9 @@ const Layout = ({ children }) => {
         </title>
       </Head>
       <div className='min-h-screen grid auto-rows-fr grid-rows-[auto_1fr_auto] grid-cols-[100%]'>
-        {!isProjectPage && <Header />}
+        <Header />
         {children}
-        {!isProjectPage && <Footer />}
+        <Footer />
       </div>
     </>
   );

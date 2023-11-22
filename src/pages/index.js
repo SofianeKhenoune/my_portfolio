@@ -63,10 +63,10 @@ export default function Home() {
     <main className='px-10 pt-5'>
       <Profil />
       <AboutMe />
-      <p id='projects'></p>
       <Projects />
       <Education />
       <Element
+        id='contact'
         name='contact'
         className='contacts pt-10 h-[calc(100vh-90px)] flex justify-center items-center flex-col'
       >
