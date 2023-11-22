@@ -7,7 +7,8 @@ import ProfilHeader from './ProfilHeader';
 
 const NavBar = () => {
   const [showNav, setShowNav] = useState(false);
-  const isProjectPage = useRouter().pathname.includes('/project');
+  const isHomePage = useRouter().pathname === '/';
+
   const navItemStyle =
     'block py-2 px-4 text-slate-50 rounded hover:bg-buttonHover hover:scale-110 transition duration-300 capitalize border border-transparent text-center';
   const navActiveItemStyle = `${navItemStyle} !border-light`;
@@ -52,18 +53,7 @@ const NavBar = () => {
         >
           <div className='font-medium capitalize bg-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-2 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
             {navBarItems.map((item, index) =>
-              isProjectPage ? (
-                <Link
-                  key={item.name + index}
-                  href={`/#${item.to}`}
-                  className={navItemStyle}
-                  onClick={() => {
-                    setShowNav(false);
-                  }}
-                >
-                  {item.name}
-                </Link>
-              ) : (
+              isHomePage ? (
                 <Button key={item.name + index}>
                   <LinkScroll
                     to={item.to}
@@ -79,6 +69,17 @@ const NavBar = () => {
                     {item.name}
                   </LinkScroll>
                 </Button>
+              ) : (
+                <Link
+                  key={item.name + index}
+                  href={`/#${item.to}`}
+                  className={navItemStyle}
+                  onClick={() => {
+                    setShowNav(false);
+                  }}
+                >
+                  {item.name}
+                </Link>
               )
             )}
           </div>

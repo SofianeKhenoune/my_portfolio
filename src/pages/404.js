@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { FaAngry, FaSmile } from 'react-icons/fa';
-import { GiExitDoor } from 'react-icons/gi';
+import { IoExit } from 'react-icons/io5';
 
 const NotFound = () => {
   const router = useRouter();
@@ -40,7 +40,7 @@ const NotFound = () => {
             }}
           >
             Par ici la sortie
-            <GiExitDoor />
+            <IoExit className='mt-2' />
           </Link>
         </p>
       </div>
