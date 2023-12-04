@@ -12,12 +12,28 @@ import { Element } from 'react-scroll';
 gsap.registerPlugin(scrollTrigger);
 export default function Home() {
   const router = useRouter();
+
   useEffect(() => {
-    router.push('/', '/');
+    const scrollPosition = sessionStorage.getItem('scrollPosition');
+    if (scrollPosition) {
+      window.scrollTo(0, Number(scrollPosition));
+    }
+  }, []);
+  useEffect(() => {
+    // Sauvegarder la position de défilement actuelle lorsqu'on navigue entre les pages
+    const handleRouteChange = () => {
+      sessionStorage.setItem('scrollPosition', window.scrollY.toString());
+    };
+    router.events.on('routeChangeStart', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [router.events]);
+  useEffect(() => {
     const blocs = gsap.utils.toArray('.bloc');
     const titles = gsap.utils.toArray('h2');
     const contactLinks = gsap.utils.toArray('.contacts .contact-icon');
-
+    router.push('/', undefined, { shallow: true });
     const tl = gsap.timeline();
     contactLinks.forEach((link) => {
       tl.fromTo(
@@ -59,6 +75,7 @@ export default function Home() {
       });
     });
   }, []);
+
   return (
     <main className='px-10'>
       <Profil />
