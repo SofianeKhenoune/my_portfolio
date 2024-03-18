@@ -16,6 +16,10 @@ const Layout = ({ children }) => {
         <title>
           Portfolio - Sofiane Khenoune - Développeur Web et Web Mobile
         </title>
+        <meta
+          name='description'
+          content='Découvrez le portfolio de Sofiane Khenoune, développeur Web et Web Mobile spécialisé React. Explorez mes projets variés et mes compétences en HTML, CSS, JavaScript.'
+        />
       </Head>
       <div className='min-h-screen grid auto-rows-fr grid-rows-[auto_1fr_auto] grid-cols-[100%]'>
         <Header />
