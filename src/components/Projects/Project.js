@@ -5,6 +5,7 @@ import { CgArrowsExpandUpRight } from 'react-icons/cg';
 const Project = ({ arrayOfIcons, projectName, taskList, slug }) => {
   return (
     <div className='bloc border-light border opacity-0 translate-y-20 w-96 rounded-xl p-3 bg-medium h-auto'>
+      <h1 className='hidden'>{projectName}</h1>
       <div className='mb-3 flex justify-between'>
         <h2 className='text-xl pb-2 border-b border-light'>{projectName}</h2>
         <Link href={`/project/${slug}`}>
