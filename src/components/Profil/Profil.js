@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { SiJavascript, SiPhp, SiReact, SiRedux } from 'react-icons/si';
 import { Element } from 'react-scroll';
+import profilPic from '../../../public/images/profil-home.png';
 import ContactLinks from '../Contact/ContactLinks';
 
 const Profil = () => {
@@ -13,12 +14,12 @@ const Profil = () => {
       <div className='flex items-center justify-center'>
         <div className='bloc flex flex-col md:flex:row justify-center items-center opacity-0 translate-y-20'>
           <Image
-            src='/images/profil-home.png'
+            src={profilPic}
             width={300}
             height={300}
             alt='photo de profil'
             className='mb-6 border border-light rounded-full p-2'
-            priority={1}
+            priority
           />
           <h1 className='border-b border-b-light text-2xl italic pb-3 font-bold md:text-3xl'>
             Sofiane Khenoune

@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import profilPic from '../../../public/images/profil-home.png';
 
 const ProfilHeader = () => {
   return (
     <div className='flex items-center border-white'>
       <Image
-        src='/images/profil-home.png'
+        src={profilPic}
         className='mr-3 rounded-full border border-light'
         alt='profil Logo'
         width={50}
