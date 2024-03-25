@@ -6,7 +6,16 @@ export default function Document() {
       lang='fr'
       className={`${roboto_slab.className} box-border m-0 p-0 scroll-smooth`}
     >
-      <Head />
+      <Head>
+        <link rel='icon' href='/images/profil-home.png' sizes='any' />
+        <title>
+          Portfolio - Sofiane Khenoune - Développeur Web et Web Mobile
+        </title>
+        <meta
+          name='description'
+          content='Découvrez le portfolio de Sofiane Khenoune, développeur Web et Web Mobile spécialisé React. Explorez mes projets variés et mes compétences en HTML, CSS, JavaScript.'
+        />
+      </Head>
       <body className='text-white bg-dark text-lg'>
         <Main />
         <NextScript />
