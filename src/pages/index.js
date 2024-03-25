@@ -78,9 +78,6 @@ export default function Home() {
 
   return (
     <main className='px-10'>
-      <h1 className='hidden'>
-        Portfolio de Sofiane Khenoune, Developeur Web et Web Mobile{' '}
-      </h1>
       <Profil />
       <AboutMe />
       <Projects />

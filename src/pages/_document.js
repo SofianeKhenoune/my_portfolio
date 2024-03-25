@@ -13,7 +13,7 @@ export default function Document() {
         </title>
         <meta
           name='description'
-          content='Découvrez le portfolio de Sofiane Khenoune, développeur Web et Web Mobile spécialisé React. Explorez mes projets variés et mes compétences en HTML, CSS, JavaScript.'
+          content='Découvrez le portfolio de Sofiane Khenoune, développeur Web et Web Mobile spécialisé React. Explorez mes projets et compétences en HTML, CSS, JavaScript.'
         />
       </Head>
       <body className='text-white bg-dark text-lg'>

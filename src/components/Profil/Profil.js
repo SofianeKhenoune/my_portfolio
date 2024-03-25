@@ -20,16 +20,16 @@ const Profil = () => {
             className='mb-6 border border-light rounded-full p-2'
             priority={1}
           />
-          <h2 className='border-b border-b-light text-2xl italic pb-3 font-bold md:text-3xl'>
+          <h1 className='border-b border-b-light text-2xl italic pb-3 font-bold md:text-3xl'>
             Sofiane Khenoune
-          </h2>
+          </h1>
         </div>
       </div>
       <div className='flex items-center justify-center md:flex-1 md:h-full'>
         <div className='bloc bg-medium border border-light p-5 rounded-lg opacity-0 translate-y-20'>
-          <h1 className='italic mb-5 text-xl font-bold border-b border-b-light pb-3'>
+          <h2 className='italic mb-5 text-xl font-bold border-b border-b-light pb-3'>
             Développeur web et web mobile
-          </h1>
+          </h2>
 
           <p className='border-b border-b-light pb-3'>
             Passionné de développement web et mobile, spécialisé en JavaScript
