@@ -40,6 +40,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>Portfolio - Sofiane Khenoune</title>
         <meta name='description' content='Portfolio - Sofiane Khenoune' />
+        <meta name='robots' content='index, follow' />
       </Head>
       {loading ? (
         <Layout>

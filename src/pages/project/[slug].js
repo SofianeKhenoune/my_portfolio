@@ -39,6 +39,8 @@ const ProjectPage = () => {
         <meta
           name='description'
           content={`Portfolio de Sofiane Khenoune - mon projet ${project.title}`}
+          <meta name="robots" content="index, follow"/>
+
         />
       </Head>
       {/* If loading is true, render the project page content*/}
