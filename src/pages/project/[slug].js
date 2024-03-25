@@ -35,6 +35,11 @@ const ProjectPage = () => {
     <>
       <Head>
         <title>{`Portfolio - Sofiane Khenoune - ${project.title}`}</title>
+
+        <meta
+          name='description'
+          content={`Portfolio de Sofiane Khenoune - mon projet ${project.title}`}
+        />
       </Head>
       {/* If loading is true, render the project page content*/}
       {loading ? (
