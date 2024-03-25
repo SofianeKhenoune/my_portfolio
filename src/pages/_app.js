@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout/Layout';
 import Spinner from '@/components/Spinner/Spinner';
 import '@/styles/globals.scss';
+import Head from 'next/head';
 import { useEffect, useState } from 'react';
 
 /**
@@ -34,11 +35,19 @@ export default function App({ Component, pageProps }) {
    * Renders the component and the layout if the loading is true,
    * otherwise renders a spinner component.
    */
-  return loading ? (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  ) : (
-    <Spinner />
+  return (
+    <>
+      <Head>
+        <title>Portfolio - Sofiane Khenoune</title>
+        <meta name='description' content='Portfolio - Sofiane Khenoune' />
+      </Head>
+      {loading ? (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      ) : (
+        <Spinner />
+      )}
+    </>
   );
 }
