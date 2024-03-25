@@ -5,6 +5,7 @@ import Profil from '@/components/Profil/Profil';
 import Projects from '@/components/Projects/Projects';
 import gsap from 'gsap';
 import scrollTrigger from 'gsap/dist/ScrollTrigger';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { Element } from 'react-scroll';
@@ -77,21 +78,27 @@ export default function Home() {
   }, []);
 
   return (
-    <main className='px-10'>
-      <Profil />
-      <AboutMe />
-      <Projects />
-      <Education />
-      <Element
-        id='contact'
-        name='contact'
-        className='contacts pt-10 h-[calc(100vh-90px)] flex justify-center items-center flex-col'
-      >
-        <h2 className='capitalize text-2xl font-bold text-center my-20 md:text-3xl opacity-0 -translate-x-10 max-w-max mx-auto p-2'>
-          Contact
-        </h2>
-        <ContactLinks iconsSize={50} />
-      </Element>
-    </main>
+    <>
+      <Head>
+        <title>Portfolio - Sofiane Khenoune</title>
+        <meta name='description' content='Portfolio - Sofiane Khenoune' />
+      </Head>
+      <main className='px-10'>
+        <Profil />
+        <AboutMe />
+        <Projects />
+        <Education />
+        <Element
+          id='contact'
+          name='contact'
+          className='contacts pt-10 h-[calc(100vh-90px)] flex justify-center items-center flex-col'
+        >
+          <h2 className='capitalize text-2xl font-bold text-center my-20 md:text-3xl opacity-0 -translate-x-10 max-w-max mx-auto p-2'>
+            Contact
+          </h2>
+          <ContactLinks iconsSize={50} />
+        </Element>
+      </main>
+    </>
   );
 }
