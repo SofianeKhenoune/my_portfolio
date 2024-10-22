@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-const AboutBloc = ({ children, Icon, title }) => {
+const AboutCard = ({ children, Icon, title }) => {
   return (
     <div className='bloc border-light border opacity-0 translate-y-20 w-96 rounded-xl p-3 bg-medium h-auto'>
       <div className='flex items-center justify-between mb-3'>
@@ -11,10 +11,10 @@ const AboutBloc = ({ children, Icon, title }) => {
   );
 };
 
-AboutBloc.propTypes = {
+AboutCard.propTypes = {
   Icon: PropTypes.elementType.isRequired,
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
 };
 
-export default AboutBloc;
+export default AboutCard;
