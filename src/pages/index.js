@@ -1,23 +1,39 @@
+import AboutMe from '@/components/AboutMe/AboutMe';
+import ContactLinks from '@/components/Contact/ContactLinks';
+import Education from '@/components/Education/Education';
+import Profil from '@/components/Profil/Profil';
+import Projects from '@/components/Projects/Projects';
 import gsap from 'gsap';
 import scrollTrigger from 'gsap/dist/ScrollTrigger';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { Element } from 'react-scroll';
-import AboutMe from '../../components/AboutMe/AboutMe';
-import ContactLinks from '../../components/Contact/ContactLinks';
-import Education from '../../components/Education/Education';
-import Profil from '../../components/Profil/Profil';
-import Projects from '../../components/Projects/Projects';
 
 gsap.registerPlugin(scrollTrigger);
 export default function Home() {
   const router = useRouter();
+
   useEffect(() => {
-    router.push('/', '/');
+    const scrollPosition = sessionStorage.getItem('scrollPosition');
+    if (scrollPosition) {
+      window.scrollTo(0, Number(scrollPosition));
+    }
+  }, []);
+  useEffect(() => {
+    // Sauvegarder la position de défilement actuelle lorsqu'on navigue entre les pages
+    const handleRouteChange = () => {
+      sessionStorage.setItem('scrollPosition', window.scrollY.toString());
+    };
+    router.events.on('routeChangeStart', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [router.events]);
+  useEffect(() => {
     const blocs = gsap.utils.toArray('.bloc');
     const titles = gsap.utils.toArray('h2');
     const contactLinks = gsap.utils.toArray('.contacts .contact-icon');
-
+    router.push('/', undefined, { shallow: true });
     const tl = gsap.timeline();
     contactLinks.forEach((link) => {
       tl.fromTo(
@@ -59,14 +75,15 @@ export default function Home() {
       });
     });
   }, []);
+
   return (
     <main className='px-10'>
       <Profil />
       <AboutMe />
-      <p id='projects'></p>
       <Projects />
       <Education />
       <Element
+        id='contact'
         name='contact'
         className='contacts pt-10 h-[calc(100vh-90px)] flex justify-center items-center flex-col'
       >

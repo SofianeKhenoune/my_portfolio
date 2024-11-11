@@ -6,8 +6,9 @@ import ContactLinks from '../Contact/ContactLinks';
 const Profil = () => {
   return (
     <Element
-      className='min-h-screen flex flex-col md:flex-row gap-5 items-center justify-center pt-20'
+      className='min-h-screen flex flex-col md:flex-row gap-5 items-center justify-center'
       name='home'
+      id='home'
     >
       <div className='flex items-center justify-center'>
         <div className='bloc flex flex-col md:flex:row justify-center items-center opacity-0 translate-y-20'>
@@ -16,17 +17,12 @@ const Profil = () => {
             width={300}
             height={300}
             alt='photo de profil'
-            className='mb-6 border border-light rounded-full p-1'
+            className='mb-6 border border-light rounded-full p-2'
             priority={1}
           />
-          <Image
-            src='/images/myname.svg'
-            width={400}
-            height={100}
-            alt='Sofiane Khenoune'
-            title='Sofiane Khenoune'
-            className='border-b border-b-light border-b-'
-          />
+          <h2 className='border-b border-b-light text-2xl italic pb-3 font-bold md:text-3xl'>
+            Sofiane Khenoune
+          </h2>
         </div>
       </div>
       <div className='flex items-center justify-center md:flex-1 md:h-full'>
