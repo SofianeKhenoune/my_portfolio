@@ -12,7 +12,6 @@ const NavBar = () => {
   const navItemStyle =
     'block py-2 px-4 text-slate-50 rounded hover:bg-buttonHover hover:scale-110 transition duration-300 capitalize border border-transparent text-center';
   const navActiveItemStyle = `${navItemStyle} !border-light`;
-  console.log(navBarItems);
 
   return (
     <nav className='border-gray-200 dark:bg-gray-900'>

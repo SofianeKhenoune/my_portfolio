@@ -19,7 +19,7 @@ const ContactLinks = ({ iconsSize }) => {
         iconSize={iconsSize}
       />
       <ContactItem
-        href='http://www.linkedin.com/in/sofianekhenoune'
+        href='https://www.linkedin.com/in/sofianekhenoune'
         title='Lien vers LinkedIn'
         Icon={SiLinkedin}
         iconSize={iconsSize}
